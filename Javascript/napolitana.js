@@ -5,7 +5,7 @@
 function cambiarcolorfamiliarnapolitana(){
   document.getElementById("familiarnapolitana").style.background = "linear-gradient(#ff8900, #ff7700, rgb(255, 55, 0))"
   document.getElementById("familiarnapolitana").style.color = "#fff"
-  document.getElementById("familiarnapolitana").style.fontSize = "170%"
+  document.getElementById("familiarnapolitana").style.fontSize = "180%"
   document.getElementById("mediananapolitana").style.background = "#fff"
   document.getElementById("mediananapolitana").style.color = "#ff7700"
   document.getElementById("mediananapolitana").style.fontSize = "150%"
@@ -16,7 +16,7 @@ function cambiarcolorfamiliarnapolitana(){
 function cambiarcolormediananapolitana(){
   document.getElementById("mediananapolitana").style.background = "linear-gradient(#ff8900, #ff7700, rgb(255, 55, 0))"
   document.getElementById("mediananapolitana").style.color = "#fff"
-  document.getElementById("mediananapolitana").style.fontSize = "170%"
+  document.getElementById("mediananapolitana").style.fontSize = "180%"
   document.getElementById("familiarnapolitana").style.background = "#fff"
   document.getElementById("familiarnapolitana").style.color = "#ff7700"
   document.getElementById("familiarnapolitana").style.fontSize = "150%"
@@ -28,7 +28,7 @@ function cambiarcolormediananapolitana(){
 function cambiarcolorsalsapizzanapolitana(){
   document.getElementById("salsapizzanapolitana").style.background = "linear-gradient(#ff8900, #ff7700, rgb(255, 55, 0))"
   document.getElementById("salsapizzanapolitana").style.color = "#fff"
-  document.getElementById("salsapizzanapolitana").style.fontSize = "170%"
+  document.getElementById("salsapizzanapolitana").style.fontSize = "180%"
   document.getElementById("salsabbqnapolitana").style.background = "#fff"
   document.getElementById("salsabbqnapolitana").style.color = "#ff7700"
   document.getElementById("salsabbqnapolitana").style.fontSize = "150%"
@@ -38,7 +38,7 @@ function cambiarcolorsalsapizzanapolitana(){
 function cambiarcolorsalsabbqnapolitana(){
   document.getElementById("salsabbqnapolitana").style.background = "linear-gradient(#ff8900, #ff7700, rgb(255, 55, 0))"
   document.getElementById("salsabbqnapolitana").style.color = "#fff"
-  document.getElementById("salsabbqnapolitana").style.fontSize = "170%"
+  document.getElementById("salsabbqnapolitana").style.fontSize = "180%"
   document.getElementById("salsapizzanapolitana").style.background = "#fff"
   document.getElementById("salsapizzanapolitana").style.color = "#ff7700"
   document.getElementById("salsapizzanapolitana").style.fontSize = "150%"
@@ -57,7 +57,7 @@ function cambiarcolormasatradicionalnapolitana(){
   document.getElementById("masadelgadanapolitana").style.fontSize = "150%"
   document.getElementById("masatradicionalnapolitana").style.background = "linear-gradient(#ff8900, #ff7700, rgb(255, 55, 0))"
   document.getElementById("masatradicionalnapolitana").style.color = "#fff"
-  document.getElementById("masatradicionalnapolitana").style.fontSize = "170%"
+  document.getElementById("masatradicionalnapolitana").style.fontSize = "180%"
   document.getElementById("input-napolitana-masa").value = 'MASA TRADICIONAL';
 }
 
@@ -67,76 +67,238 @@ function cambiarcolormasadelgadanapolitana(){
   document.getElementById("masatradicionalnapolitana").style.fontSize = "150%"
   document.getElementById("masadelgadanapolitana").style.background = "linear-gradient(#ff8900, #ff7700, rgb(255, 55, 0))"
   document.getElementById("masadelgadanapolitana").style.color = "#fff"
-  document.getElementById("masadelgadanapolitana").style.fontSize = "170%"
+  document.getElementById("masadelgadanapolitana").style.fontSize = "180%"
   document.getElementById("input-napolitana-masa").value = 'MASA DELGADA';
 }
 
 
-function napolitanamedianasx() {
-  document.getElementById("input-napolitana-precio").value = '$6.000';
+
+
+
+function napolitanabuttonoff(){
+  document.getElementById("mediananapolitana").style.background = "#fff"
+  document.getElementById("mediananapolitana").style.color = "#b8b8b8"
+  document.getElementById("mediananapolitana").style.border = "4px solid #b8b8b8"
+  document.getElementById("familiarnapolitana").disabled = true;
+  document.getElementById("familiarnapolitana").style.background = "#fff"
+  document.getElementById("familiarnapolitana").style.color = "#b8b8b8"
+  document.getElementById("familiarnapolitana").style.border = "4px solid #b8b8b8"
+  document.getElementById("mediananapolitana").disabled = true;
+
+}
+
+
+
+
+function napolitanamedianas() {
+  document.getElementById("input-napolitana-precio").value = '8990';
   document.getElementById("input-napolitana-cantidad").value = '1';
   document.getElementById("input-napolitana-tamaño").value = 'MEDIANA';
-  document.getElementById("input-napolitana-pizza").value = 'NAPOLITANA';
+  document.getElementById("input-napolitana-pizza").value = 'ITALIANA';
+
+  
+// -italiana-
+document.getElementById("1italianamedianas").hidden = true;
+document.getElementById("1italianamedianasuno").hidden = false;
+
+// -----------------------------------------------------------
+// -hawaiana-
+document.getElementById("1hawaianamedianas").hidden = true;
+document.getElementById("1hawaianamedianasuno").hidden = false;
+
+// -napolitana-
+document.getElementById("1napolitanamedianas").hidden = true;
+document.getElementById("1napolitanamedianasuno").hidden = false;
+
+// -super-pepperoni-
+document.getElementById("1superpepperonimedianas").hidden = true;
+document.getElementById("1superpepperonimedianasuno").hidden = false;
+
+// -vegetariana-
+document.getElementById("1vegetarianamedianas").hidden = true;
+document.getElementById("1vegetarianamedianasuno").hidden = false;
+
+// -luco-pizza-
+document.getElementById("1lucopizzamedianas").hidden = true;
+document.getElementById("1lucopizzamedianasuno").hidden = false;
+
+// -pollo-bbq-
+document.getElementById("1pollobbqmedianas").hidden = true;
+document.getElementById("1pollobbqmedianasuno").hidden = false;
+
+// -chillian-
+document.getElementById("1chillianmedianas").hidden = true;
+document.getElementById("1chillianmedianasuno").hidden = false;
+
+// -cheeseburger-
+document.getElementById("1cheeseburgerfamiliares").hidden = true;
+document.getElementById("1cheeseburgerfamiliaresuno").hidden = false;
   
   }
 
 
-function napolitanamedianas() {
-document.getElementById("input-napolitana-precio").value = '$8.990';
+function napolitanamedianasuno() {
+document.getElementById("input-napolitana-precio").value = '6000';
 document.getElementById("input-napolitana-cantidad").value = '1';
 document.getElementById("input-napolitana-tamaño").value = 'MEDIANA';
-document.getElementById("input-napolitana-pizza").value = 'NAPOLITANA';
+document.getElementById("input-napolitana-pizza").value = 'ITALIANA';
+
+// -italiana-
+document.getElementById("1italianamedianas").hidden = false;
+document.getElementById("1italianamedianasuno").hidden = true;
+
+// -----------------------------------------------------------
+// -hawaiana-
+document.getElementById("1hawaianamedianas").hidden = false;
+document.getElementById("1hawaianamedianasuno").hidden = true;
+
+// -napolitana-
+document.getElementById("1napolitanamedianas").hidden = false;
+document.getElementById("1napolitanamedianasuno").hidden = true;
+
+// -super-pepperoni-
+document.getElementById("1superpepperonimedianas").hidden = false;
+document.getElementById("1superpepperonimedianasuno").hidden = true;
+
+// -vegetariana-
+document.getElementById("1vegetarianamedianas").hidden = false;
+document.getElementById("1vegetarianamedianasuno").hidden = true;
+
+// -luco-pizza-
+document.getElementById("1lucopizzamedianas").hidden = false;
+document.getElementById("1lucopizzamedianasuno").hidden = true;
+
+// -pollo-bbq-
+document.getElementById("1pollobbqmedianas").hidden = false;
+document.getElementById("1pollobbqmedianasuno").hidden = true;
+
+// -chillian-
+document.getElementById("1chillianmedianas").hidden = false;
+document.getElementById("1chillianmedianasuno").hidden = true;
+
+// -cheeseburger-
+document.getElementById("1cheeseburgerfamiliares").hidden = true;
+document.getElementById("1cheeseburgerfamiliaresuno").hidden = false;
 
 }
 
+
+
 function napolitanamedianasdos() {
-document.getElementById("input-napolitana-precio").value = '$14.990';
+document.getElementById("input-napolitana-precio").value = '14990';
 document.getElementById("input-napolitana-cantidad").value = '2';
 
 
 }
 
 function napolitanamedianastres() {
-document.getElementById("input-napolitana-precio").value = '$23.980';
+document.getElementById("input-napolitana-precio").value = '23980';
 document.getElementById("input-napolitana-cantidad").value = '3';
 
 }
 
 function napolitanamedianascuatro() {
-document.getElementById("input-napolitana-precio").value = '$29.980';
+document.getElementById("input-napolitana-precio").value = '29980';
 document.getElementById("input-napolitana-cantidad").value = '4';
 
 }
 
 
-function napolitanafamiliaresx() {
-  document.getElementById("input-napolitana-precio").value = '$7.000';
+function napolitanafamiliaresuno() {
+  document.getElementById("input-napolitana-precio").value = '7000';
   document.getElementById("input-napolitana-cantidad").value = '1';
   document.getElementById("input-napolitana-tamaño").value = 'FAMILIAR';
   document.getElementById("input-napolitana-pizza").value = 'NAPOLITANA';
+
+  // -italiana-
+document.getElementById("1italianafamiliares").hidden = false;
+document.getElementById("1italianafamiliaresuno").hidden = true;
+
+// -----------------------------------------------------------
+// -hawaiana-
+document.getElementById("1hawaianafamiliares").hidden = false;
+document.getElementById("1hawaianafamiliaresuno").hidden = true;
+
+// -napolitana-
+document.getElementById("1napolitanafamiliares").hidden = false;
+document.getElementById("1napolitanafamiliaresuno").hidden = true;
+
+// -super-pepperoni-
+document.getElementById("1superpepperonifamiliares").hidden = false;
+document.getElementById("1superpepperonifamiliaresuno").hidden = true;
+
+// -vegetariana-
+document.getElementById("1vegetarianafamiliares").hidden = false;
+document.getElementById("1vegetarianafamiliaresuno").hidden = true;
+
+// -luco-pizza-
+document.getElementById("1lucopizzafamiliares").hidden = false;
+document.getElementById("1lucopizzafamiliaresuno").hidden = true;
+
+// -pollo-bbq-
+document.getElementById("1pollobbqfamiliares").hidden = false;
+document.getElementById("1pollobbqfamiliaresuno").hidden = true;
+
+// -chillian-
+document.getElementById("1chillianfamiliares").hidden = false;
+document.getElementById("1chillianfamiliaresuno").hidden = true;
+
+
   }
 
 
 
 function napolitanafamiliares() {
-document.getElementById("input-napolitana-precio").value = '$10.990';
+document.getElementById("input-napolitana-precio").value = '10990';
 document.getElementById("input-napolitana-cantidad").value = '1';
 document.getElementById("input-napolitana-tamaño").value = 'FAMILIAR';
 document.getElementById("input-napolitana-pizza").value = 'NAPOLITANA';
+// -italiana-
+document.getElementById("1italianafamiliares").hidden = true;
+document.getElementById("1italianafamiliaresuno").hidden = false;
+
+// -----------------------------------------------------------
+// -hawaiana-
+document.getElementById("1hawaianafamiliares").hidden = true;
+document.getElementById("1hawaianafamiliaresuno").hidden = false;
+
+// -napolitana-
+document.getElementById("1napolitanafamiliares").hidden = true;
+document.getElementById("1napolitanafamiliaresuno").hidden = false;
+
+// -super-pepperoni-
+document.getElementById("1superpepperonifamiliares").hidden = true;
+document.getElementById("1superpepperonifamiliaresuno").hidden = false;
+
+// -vegetariana-
+document.getElementById("1vegetarianafamiliares").hidden = true;
+document.getElementById("1vegetarianafamiliaresuno").hidden = false;
+
+// -luco-pizza-
+document.getElementById("1lucopizzafamiliares").hidden = true;
+document.getElementById("1lucopizzafamiliaresuno").hidden = false;
+
+// -pollo-bbq-
+document.getElementById("1pollobbqfamiliares").hidden = true;
+document.getElementById("1pollobbqfamiliaresuno").hidden = false;
+
+// -chillian-
+document.getElementById("1chillianfamiliares").hidden = true;
+document.getElementById("1chillianfamiliaresuno").hidden = false;
 }
 
 function napolitanafamiliaresdos() {
-document.getElementById("input-napolitana-precio").value = '$17.990';
+document.getElementById("input-napolitana-precio").value = '17990';
 document.getElementById("input-napolitana-cantidad").value = '2';
 }
 
 function napolitanafamiliarestres() {
-document.getElementById("input-napolitana-precio").value = '$28.990';
+document.getElementById("input-napolitana-precio").value = '28990';
 document.getElementById("input-napolitana-cantidad").value = '3';
 }
 
 function napolitanafamiliarescuatro() {
-document.getElementById("input-napolitana-precio").value = '$35.980';
+document.getElementById("input-napolitana-precio").value = '35980';
 document.getElementById("input-napolitana-cantidad").value = '4';
 }
 
@@ -158,6 +320,19 @@ function napolitanapizza() {
     document.getElementById("inputs-napolitana").hidden = true;
     document.getElementById("finalizar-pedido-button").hidden = true; 
     document.getElementById("volver-napolitana").hidden = true; 
+    document.getElementById("mediananapolitana").disabled = false;
+    document.getElementById("familiarnapolitana").disabled = false;  
+    document.getElementById("familiarnapolitana").style.background = "#fff"
+    document.getElementById("familiarnapolitana").style.color = "#ff7700"
+    document.getElementById("familiarnapolitana").style.fontSize = "150%"
+    document.getElementById("familiarnapolitana").style.border = "4px solid #ff7700"
+    document.getElementById("mediananapolitana").style.background = "#fff"
+    document.getElementById("mediananapolitana").style.color = "#ff7700"
+    document.getElementById("mediananapolitana").style.fontSize = "150%"
+    document.getElementById("mediananapolitana").style.border = "4px solid #ff7700"
+    // -napolitana-
+document.getElementById("1napolitanafamiliares").hidden = false;
+document.getElementById("1napolitanafamiliaresuno").hidden = true;
     }
 
 
@@ -178,85 +353,7 @@ function napolitanapizza() {
 
 
 
-      // Napolitana
-      document.getElementById("finalizarpedido-napolitana").hidden = false; 
-      document.getElementById("finalizarpedido-napolitanax").hidden = true;
-      document.getElementById("1napolitanamedianas").hidden = false;
-      document.getElementById("1napolitanafamiliares").hidden = false;
-      document.getElementById("1napolitanamedianasx").hidden = true;
-      document.getElementById("1napolitanafamiliaresx").hidden = true;
-
- 
-
-      // Hawaiana
-      document.getElementById("finalizarpedido-hawaiana").hidden = false; 
-      document.getElementById("finalizarpedido-hawaianax").hidden = true;
-      document.getElementById("1hawaianamedianas").hidden = false;
-      document.getElementById("1hawaianafamiliares").hidden = false;
-      document.getElementById("1hawaianamedianasx").hidden = true;
-      document.getElementById("1hawaianafamiliaresx").hidden = true;
-
-
-       // Vegetariana
-       document.getElementById("finalizarpedido-vegetariana").hidden = false; 
-       document.getElementById("finalizarpedido-vegetarianax").hidden = true;
-       document.getElementById("1vegetarianamedianas").hidden = false;
-       document.getElementById("1vegetarianafamiliares").hidden = false;
-       document.getElementById("1vegetarianamedianasx").hidden = true;
-       document.getElementById("1vegetarianafamiliaresx").hidden = true;
-
-
-        // Pollo BBQ
-      document.getElementById("finalizarpedido-pollobbq").hidden = false; 
-      document.getElementById("finalizarpedido-pollobbqx").hidden = true;
-      document.getElementById("1pollobbqmedianas").hidden = false;
-      document.getElementById("1pollobbqfamiliares").hidden = false;
-      document.getElementById("1pollobbqmedianasx").hidden = true;
-      document.getElementById("1pollobbqfamiliaresx").hidden = true;
-
-
-
-
-      // Luco Pizza
-      document.getElementById("finalizarpedido-lucopizza").hidden = false; 
-      document.getElementById("finalizarpedido-lucopizzax").hidden = true;
-      document.getElementById("1lucopizzamedianas").hidden = false;
-      document.getElementById("1lucopizzafamiliares").hidden = false;
-      document.getElementById("1lucopizzamedianasx").hidden = true;
-      document.getElementById("1lucopizzafamiliaresx").hidden = true;
-
-
-      
-
-  
-      // Chillian
-      document.getElementById("finalizarpedido-chillian").hidden = false; 
-      document.getElementById("finalizarpedido-chillianx").hidden = true;
-      document.getElementById("1chillianmedianas").hidden = false;
-      document.getElementById("1chillianfamiliares").hidden = false;
-      document.getElementById("1chillianmedianasx").hidden = true;
-      document.getElementById("1chillianfamiliaresx").hidden = true;
-
-
-
-
-
-      // Super Pepperoni
-      document.getElementById("finalizarpedido-superpepperoni").hidden = false; 
-      document.getElementById("finalizarpedido-superpepperonix").hidden = true;
-      document.getElementById("1superpepperonimedianas").hidden = false;
-      document.getElementById("1superpepperonifamiliares").hidden = false;
-      document.getElementById("1superpepperonimedianasx").hidden = true;
-      document.getElementById("1superpepperonifamiliaresx").hidden = true;
-
-      
-
-  // This.Pizza
-      document.getElementById("1napolitanamedianas").hidden = true;
-      document.getElementById("1napolitanafamiliares").hidden = true;
-
-
-
+    
 
 
 
@@ -332,92 +429,7 @@ function napolitanapizza() {
       document.getElementById("input-napolitana-instrucciones").value= nota;
       document.getElementById("volver-napolitana-html").hidden = true; 
 
-           // Napolitana
-           document.getElementById("finalizarpedido-napolitana").hidden = true; 
-           document.getElementById("finalizarpedido-napolitanax").hidden = false;
-           document.getElementById("1napolitanamedianas").hidden = true;
-           document.getElementById("1napolitanafamiliares").hidden = true;
-           document.getElementById("1napolitanamedianasx").hidden = false;
-           document.getElementById("1napolitanafamiliaresx").hidden = false;
-     
-      
-     
-           // Hawaiana
-           document.getElementById("finalizarpedido-hawaiana").hidden = true; 
-           document.getElementById("finalizarpedido-hawaianax").hidden = false;
-           document.getElementById("1hawaianamedianas").hidden = true;
-           document.getElementById("1hawaianafamiliares").hidden = true;
-           document.getElementById("1hawaianamedianasx").hidden = false;
-           document.getElementById("1hawaianafamiliaresx").hidden = false;
-     
-     
-       
-           // Italiana
-           document.getElementById("finalizarpedido-italiana").hidden = true; 
-           document.getElementById("finalizarpedido-italianax").hidden = false;
-           document.getElementById("1italianamedianas").hidden = true;
-           document.getElementById("1italianafamiliares").hidden = true;
-           document.getElementById("1italianamedianasx").hidden = false;
-           document.getElementById("1italianafamiliaresx").hidden = false;
-     
-     
-            // Vegetariana
-            document.getElementById("finalizarpedido-vegetariana").hidden = true; 
-            document.getElementById("finalizarpedido-vegetarianax").hidden = false;
-            document.getElementById("1vegetarianamedianas").hidden = true;
-            document.getElementById("1vegetarianafamiliares").hidden = true;
-            document.getElementById("1vegetarianamedianasx").hidden = false;
-            document.getElementById("1vegetarianafamiliaresx").hidden = false;
-     
-     
-             // Pollo BBQ
-           document.getElementById("finalizarpedido-pollobbq").hidden = true; 
-           document.getElementById("finalizarpedido-pollobbqx").hidden = false;
-           document.getElementById("1pollobbqmedianas").hidden = true;
-           document.getElementById("1pollobbqfamiliares").hidden = true;
-           document.getElementById("1pollobbqmedianasx").hidden = false;
-           document.getElementById("1pollobbqfamiliaresx").hidden = false;
-     
-     
-     
-     
-           // Luco Pizza
-           document.getElementById("finalizarpedido-lucopizza").hidden = true; 
-           document.getElementById("finalizarpedido-lucopizzax").hidden = false;
-           document.getElementById("1lucopizzamedianas").hidden = true;
-           document.getElementById("1lucopizzafamiliares").hidden = true;
-           document.getElementById("1lucopizzamedianasx").hidden = false;
-           document.getElementById("1lucopizzafamiliaresx").hidden = false;
-     
-     
-           
-     
-       
-           // Chillian
-           document.getElementById("finalizarpedido-chillian").hidden = true; 
-           document.getElementById("finalizarpedido-chillianx").hidden = false;
-           document.getElementById("1chillianmedianas").hidden = true;
-           document.getElementById("1chillianfamiliares").hidden = true;
-           document.getElementById("1chillianmedianasx").hidden = false;
-           document.getElementById("1chillianfamiliaresx").hidden = false;
-     
-     
-     
-     
-     
-           // Super Pepperoni
-           document.getElementById("finalizarpedido-superpepperoni").hidden = true; 
-           document.getElementById("finalizarpedido-superpepperonix").hidden = false;
-           document.getElementById("1superpepperonimedianas").hidden = true;
-           document.getElementById("1superpepperonifamiliares").hidden = true;
-           document.getElementById("1superpepperonimedianasx").hidden = false;
-           document.getElementById("1superpepperonifamiliaresx").hidden = false;
-     
-           
-     
-       // This.Pizza
-           document.getElementById("1napolitanamedianas").hidden = false;
-           document.getElementById("1napolitanafamiliares").hidden = false;
+         
 
       document.getElementById("audio");
       audio.play();

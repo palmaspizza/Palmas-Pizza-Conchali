@@ -72,45 +72,131 @@ function cambiarcolormasadelgadahawaiana(){
 }
 
 
-function hawaianamedianasX() {
-  document.getElementById("input-hawaiana-precio").value = '$6.000';
+
+function hawaianamedianasuno() {
+  document.getElementById("input-hawaiana-precio").value = '6000';
   document.getElementById("input-hawaiana-cantidad").value = '1';
   document.getElementById("input-hawaiana-tamaño").value = 'MEDIANA';
-  document.getElementById("input-hawaiana-pizza").value = 'NAPOLITANA';
+  document.getElementById("input-hawaiana-pizza").value = 'ITALIANA';
+
+  
+// -italiana-
+document.getElementById("1italianamedianas").hidden = false;
+document.getElementById("1italianamedianasuno").hidden = true;
+
+// -----------------------------------------------------------
+// -hawaiana-
+document.getElementById("1hawaianamedianas").hidden = false;
+document.getElementById("1hawaianamedianasuno").hidden = true;
+
+// -napolitana-
+document.getElementById("1napolitanamedianas").hidden = false;
+document.getElementById("1napolitanamedianasuno").hidden = true;
+
+// -super-pepperoni-
+document.getElementById("1superpepperonimedianas").hidden = false;
+document.getElementById("1superpepperonimedianasuno").hidden = true;
+
+// -vegetariana-
+document.getElementById("1vegetarianamedianas").hidden = false;
+document.getElementById("1vegetarianamedianasuno").hidden = true;
+
+// -luco-pizza-
+document.getElementById("1lucopizzamedianas").hidden = false;
+document.getElementById("1lucopizzamedianasuno").hidden = true;
+
+// -pollo-bbq-
+document.getElementById("1pollobbqmedianas").hidden = false;
+document.getElementById("1pollobbqmedianasuno").hidden = true;
+
+// -chillian-
+document.getElementById("1chillianmedianas").hidden = false;
+document.getElementById("1chillianmedianasuno").hidden = true;
   
   }
 
 
+
+  function hawaianabuttonoff() {
+    document.getElementById("medianahawaiana").disabled = true;
+    document.getElementById("medianahawaiana").style.background = "#fff"
+    document.getElementById("medianahawaiana").style.color = "#b8b8b8"
+    document.getElementById("medianahawaiana").style.border = "4px solid #b8b8b8"
+    document.getElementById("familiarhawaiana").disabled = true;
+    document.getElementById("familiarhawaiana").style.background = "#fff"
+    document.getElementById("familiarhawaiana").style.color = "#b8b8b8"
+    document.getElementById("familiarhawaiana").style.border = "4px solid #b8b8b8"
+  
+  }
+
+
+
+
+
 function hawaianamedianas() {
-document.getElementById("input-hawaiana-precio").value = '$8.990';
+document.getElementById("input-hawaiana-precio").value = '8990';
 document.getElementById("input-hawaiana-cantidad").value = '1';
 document.getElementById("input-hawaiana-tamaño").value = 'MEDIANA';
-document.getElementById("input-hawaiana-pizza").value = 'NAPOLITANA';
+document.getElementById("input-hawaiana-pizza").value = 'ITALIANA';
+
+// -italiana-
+document.getElementById("1italianamedianas").hidden = true;
+document.getElementById("1italianamedianasuno").hidden = false;
+
+// -----------------------------------------------------------
+// -hawaiana-
+document.getElementById("1hawaianamedianas").hidden = true;
+document.getElementById("1hawaianamedianasuno").hidden = false;
+
+// -napolitana-
+document.getElementById("1napolitanamedianas").hidden = true;
+document.getElementById("1napolitanamedianasuno").hidden = false;
+
+// -super-pepperoni-
+document.getElementById("1superpepperonimedianas").hidden = true;
+document.getElementById("1superpepperonimedianasuno").hidden = false;
+
+// -vegetariana-
+document.getElementById("1vegetarianamedianas").hidden = true;
+document.getElementById("1vegetarianamedianasuno").hidden = false;
+
+// -luco-pizza-
+document.getElementById("1lucopizzamedianas").hidden = true;
+document.getElementById("1lucopizzamedianasuno").hidden = false;
+
+// -pollo-bbq-
+document.getElementById("1pollobbqmedianas").hidden = true;
+document.getElementById("1pollobbqmedianasuno").hidden = false;
+
+// -chillian-
+document.getElementById("1chillianmedianas").hidden = true;
+document.getElementById("1chillianmedianasuno").hidden = false;
 
 }
 
+
 function hawaianamedianasdos() {
-document.getElementById("input-hawaiana-precio").value = '$14.990';
+document.getElementById("input-hawaiana-precio").value = '14990';
 document.getElementById("input-hawaiana-cantidad").value = '2';
 
 
 }
 
 function hawaianamedianastres() {
-document.getElementById("input-hawaiana-precio").value = '$23.980';
+document.getElementById("input-hawaiana-precio").value = '23980';
 document.getElementById("input-hawaiana-cantidad").value = '3';
 
 }
 
 function hawaianamedianascuatro() {
-document.getElementById("input-hawaiana-precio").value = '$29.980';
+document.getElementById("input-hawaiana-precio").value = '29980';
 document.getElementById("input-hawaiana-cantidad").value = '4';
 
 }
 
 
-function hawaianafamiliaresX() {
-  document.getElementById("input-hawaiana-precio").value = '$7.000';
+function hawaianafamiliaresuno() {
+  document.getElementById("input-hawaiana-precio").value = '7000';
   document.getElementById("input-hawaiana-cantidad").value = '1';
   document.getElementById("input-hawaiana-tamaño").value = 'FAMILIAR';
   document.getElementById("input-hawaiana-pizza").value = 'NAPOLITANA';
@@ -119,24 +205,24 @@ function hawaianafamiliaresX() {
 
 
 function hawaianafamiliares() {
-document.getElementById("input-hawaiana-precio").value = '$10.990';
+document.getElementById("input-hawaiana-precio").value = '10990';
 document.getElementById("input-hawaiana-cantidad").value = '1';
 document.getElementById("input-hawaiana-tamaño").value = 'FAMILIAR';
 document.getElementById("input-hawaiana-pizza").value = 'NAPOLITANA';
 }
 
 function hawaianafamiliaresdos() {
-document.getElementById("input-hawaiana-precio").value = '$17.990';
+document.getElementById("input-hawaiana-precio").value = '17990';
 document.getElementById("input-hawaiana-cantidad").value = '2';
 }
 
 function hawaianafamiliarestres() {
-document.getElementById("input-hawaiana-precio").value = '$28.990';
+document.getElementById("input-hawaiana-precio").value = '28990';
 document.getElementById("input-hawaiana-cantidad").value = '3';
 }
 
 function hawaianafamiliarescuatro() {
-document.getElementById("input-hawaiana-precio").value = '$35.980';
+document.getElementById("input-hawaiana-precio").value = '35980';
 document.getElementById("input-hawaiana-cantidad").value = '4';
 }
 
@@ -158,6 +244,19 @@ function hawaianapizza() {
     document.getElementById("inputs-hawaiana").hidden = true;
     document.getElementById("finalizar-pedido-button").hidden = true; 
     document.getElementById("volver-hawaiana").hidden = true; 
+    document.getElementById("medianahawaiana").disabled = false;
+    document.getElementById("familiarhawaiana").disabled = false;  
+    document.getElementById("familiarhawaiana").style.background = "#fff"
+    document.getElementById("familiarhawaiana").style.color = "#ff7700"
+    document.getElementById("familiarhawaiana").style.fontSize = "150%"
+    document.getElementById("familiarhawaiana").style.border = "4px solid #ff7700"
+    document.getElementById("medianahawaiana").style.background = "#fff"
+    document.getElementById("medianahawaiana").style.color = "#ff7700"
+    document.getElementById("medianahawaiana").style.fontSize = "150%"
+    document.getElementById("medianahawaiana").style.border = "4px solid #ff7700"
+            // -hawaiana-
+document.getElementById("hawaianafamiliares").hidden = false;
+document.getElementById("hawaianafamiliaresuno").hidden = true;
     }
 
 
@@ -175,88 +274,6 @@ function hawaianapizza() {
       var nota=document.getElementById("instrucciones-hawaiana").value;
       document.getElementById("input-hawaiana-instrucciones").value= nota;
       document.getElementById("volver-hawaiana-html").hidden = true; 
-
-
-
-      // Hawaiana
-      document.getElementById("finalizarpedido-hawaiana").hidden = false; 
-      document.getElementById("finalizarpedido-hawaianax").hidden = true;
-      document.getElementById("1hawaianamedianas").hidden = false;
-      document.getElementById("1hawaianafamiliares").hidden = false;
-      document.getElementById("1hawaianamedianasx").hidden = true;
-      document.getElementById("1hawaianafamiliaresx").hidden = true;
-
- 
-
-      // Napolitana
-      document.getElementById("finalizarpedido-napolitana").hidden = false; 
-      document.getElementById("finalizarpedido-napolitanax").hidden = true;
-      document.getElementById("1napolitanamedianas").hidden = false;
-      document.getElementById("1napolitanafamiliares").hidden = false;
-      document.getElementById("1napolitanamedianasx").hidden = true;
-      document.getElementById("1napolitanafamiliaresx").hidden = true;
-
-
-       // Vegetariana
-       document.getElementById("finalizarpedido-vegetariana").hidden = false; 
-       document.getElementById("finalizarpedido-vegetarianax").hidden = true;
-       document.getElementById("1vegetarianamedianas").hidden = false;
-       document.getElementById("1vegetarianafamiliares").hidden = false;
-       document.getElementById("1vegetarianamedianasx").hidden = true;
-       document.getElementById("1vegetarianafamiliaresx").hidden = true;
-
-
-        // Pollo BBQ
-      document.getElementById("finalizarpedido-pollobbq").hidden = false; 
-      document.getElementById("finalizarpedido-pollobbqx").hidden = true;
-      document.getElementById("1pollobbqmedianas").hidden = false;
-      document.getElementById("1pollobbqfamiliares").hidden = false;
-      document.getElementById("1pollobbqmedianasx").hidden = true;
-      document.getElementById("1pollobbqfamiliaresx").hidden = true;
-
-
-
-
-      // Luco Pizza
-      document.getElementById("finalizarpedido-lucopizza").hidden = false; 
-      document.getElementById("finalizarpedido-lucopizzax").hidden = true;
-      document.getElementById("1lucopizzamedianas").hidden = false;
-      document.getElementById("1lucopizzafamiliares").hidden = false;
-      document.getElementById("1lucopizzamedianasx").hidden = true;
-      document.getElementById("1lucopizzafamiliaresx").hidden = true;
-
-
-      
-
-  
-      // Chillian
-      document.getElementById("finalizarpedido-chillian").hidden = false; 
-      document.getElementById("finalizarpedido-chillianx").hidden = true;
-      document.getElementById("1chillianmedianas").hidden = false;
-      document.getElementById("1chillianfamiliares").hidden = false;
-      document.getElementById("1chillianmedianasx").hidden = true;
-      document.getElementById("1chillianfamiliaresx").hidden = true;
-
-
-
-
-
-      // Super Pepperoni
-      document.getElementById("finalizarpedido-superpepperoni").hidden = false; 
-      document.getElementById("finalizarpedido-superpepperonix").hidden = true;
-      document.getElementById("1superpepperonimedianas").hidden = false;
-      document.getElementById("1superpepperonifamiliares").hidden = false;
-      document.getElementById("1superpepperonimedianasx").hidden = true;
-      document.getElementById("1superpepperonifamiliaresx").hidden = true;
-
-      
-
-  // This.Pizza
-      document.getElementById("1hawaianamedianas").hidden = true;
-      document.getElementById("1hawaianafamiliares").hidden = true;
-
-
-
 
 
 
@@ -331,94 +348,6 @@ function hawaianapizza() {
       var nota=document.getElementById("instrucciones-hawaiana").value;
       document.getElementById("input-hawaiana-instrucciones").value= nota;
       document.getElementById("volver-hawaiana-html").hidden = true; 
-
-           // Hawaiana
-           document.getElementById("finalizarpedido-hawaiana").hidden = true; 
-           document.getElementById("finalizarpedido-hawaianax").hidden = false;
-           document.getElementById("1hawaianamedianas").hidden = true;
-           document.getElementById("1hawaianafamiliares").hidden = true;
-           document.getElementById("1hawaianamedianasx").hidden = false;
-           document.getElementById("1hawaianafamiliaresx").hidden = false;
-     
-      
-     
-           // Napolitana
-           document.getElementById("finalizarpedido-napolitana").hidden = true; 
-           document.getElementById("finalizarpedido-napolitanax").hidden = false;
-           document.getElementById("1napolitanamedianas").hidden = true;
-           document.getElementById("1napolitanafamiliares").hidden = true;
-           document.getElementById("1napolitanamedianasx").hidden = false;
-           document.getElementById("1napolitanafamiliaresx").hidden = false;
-     
-     
-       
-           // Italiana
-           document.getElementById("finalizarpedido-italiana").hidden = true; 
-           document.getElementById("finalizarpedido-italianax").hidden = false;
-           document.getElementById("1italianamedianas").hidden = true;
-           document.getElementById("1italianafamiliares").hidden = true;
-           document.getElementById("1italianamedianasx").hidden = false;
-           document.getElementById("1italianafamiliaresx").hidden = false;
-     
-     
-            // Vegetariana
-            document.getElementById("finalizarpedido-vegetariana").hidden = true; 
-            document.getElementById("finalizarpedido-vegetarianax").hidden = false;
-            document.getElementById("1vegetarianamedianas").hidden = true;
-            document.getElementById("1vegetarianafamiliares").hidden = true;
-            document.getElementById("1vegetarianamedianasx").hidden = false;
-            document.getElementById("1vegetarianafamiliaresx").hidden = false;
-     
-     
-             // Pollo BBQ
-           document.getElementById("finalizarpedido-pollobbq").hidden = true; 
-           document.getElementById("finalizarpedido-pollobbqx").hidden = false;
-           document.getElementById("1pollobbqmedianas").hidden = true;
-           document.getElementById("1pollobbqfamiliares").hidden = true;
-           document.getElementById("1pollobbqmedianasx").hidden = false;
-           document.getElementById("1pollobbqfamiliaresx").hidden = false;
-     
-     
-     
-     
-           // Luco Pizza
-           document.getElementById("finalizarpedido-lucopizza").hidden = true; 
-           document.getElementById("finalizarpedido-lucopizzax").hidden = false;
-           document.getElementById("1lucopizzamedianas").hidden = true;
-           document.getElementById("1lucopizzafamiliares").hidden = true;
-           document.getElementById("1lucopizzamedianasx").hidden = false;
-           document.getElementById("1lucopizzafamiliaresx").hidden = false;
-     
-     
-           
-     
-       
-           // Chillian
-           document.getElementById("finalizarpedido-chillian").hidden = true; 
-           document.getElementById("finalizarpedido-chillianx").hidden = false;
-           document.getElementById("1chillianmedianas").hidden = true;
-           document.getElementById("1chillianfamiliares").hidden = true;
-           document.getElementById("1chillianmedianasx").hidden = false;
-           document.getElementById("1chillianfamiliaresx").hidden = false;
-     
-     
-     
-     
-     
-           // Super Pepperoni
-           document.getElementById("finalizarpedido-superpepperoni").hidden = true; 
-           document.getElementById("finalizarpedido-superpepperonix").hidden = false;
-           document.getElementById("1superpepperonimedianas").hidden = true;
-           document.getElementById("1superpepperonifamiliares").hidden = true;
-           document.getElementById("1superpepperonimedianasx").hidden = false;
-           document.getElementById("1superpepperonifamiliaresx").hidden = false;
-     
-           
-     
-       // This.Pizza
-           document.getElementById("1hawaianamedianas").hidden = false;
-           document.getElementById("1hawaianafamiliares").hidden = false;
-
       document.getElementById("audio");
       audio.play();
       

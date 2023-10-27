@@ -5,7 +5,7 @@
 function cambiarcolorfamiliarvegetariana(){
   document.getElementById("familiarvegetariana").style.background = "linear-gradient(#ff8900, #ff7700, rgb(255, 55, 0))"
   document.getElementById("familiarvegetariana").style.color = "#fff"
-  document.getElementById("familiarvegetariana").style.fontSize = "170%"
+  document.getElementById("familiarvegetariana").style.fontSize = "180%"
   document.getElementById("medianavegetariana").style.background = "#fff"
   document.getElementById("medianavegetariana").style.color = "#ff7700"
   document.getElementById("medianavegetariana").style.fontSize = "150%"
@@ -16,7 +16,7 @@ function cambiarcolorfamiliarvegetariana(){
 function cambiarcolormedianavegetariana(){
   document.getElementById("medianavegetariana").style.background = "linear-gradient(#ff8900, #ff7700, rgb(255, 55, 0))"
   document.getElementById("medianavegetariana").style.color = "#fff"
-  document.getElementById("medianavegetariana").style.fontSize = "170%"
+  document.getElementById("medianavegetariana").style.fontSize = "180%"
   document.getElementById("familiarvegetariana").style.background = "#fff"
   document.getElementById("familiarvegetariana").style.color = "#ff7700"
   document.getElementById("familiarvegetariana").style.fontSize = "150%"
@@ -28,7 +28,7 @@ function cambiarcolormedianavegetariana(){
 function cambiarcolorsalsapizzavegetariana(){
   document.getElementById("salsapizzavegetariana").style.background = "linear-gradient(#ff8900, #ff7700, rgb(255, 55, 0))"
   document.getElementById("salsapizzavegetariana").style.color = "#fff"
-  document.getElementById("salsapizzavegetariana").style.fontSize = "170%"
+  document.getElementById("salsapizzavegetariana").style.fontSize = "180%"
   document.getElementById("salsabbqvegetariana").style.background = "#fff"
   document.getElementById("salsabbqvegetariana").style.color = "#ff7700"
   document.getElementById("salsabbqvegetariana").style.fontSize = "150%"
@@ -38,7 +38,7 @@ function cambiarcolorsalsapizzavegetariana(){
 function cambiarcolorsalsabbqvegetariana(){
   document.getElementById("salsabbqvegetariana").style.background = "linear-gradient(#ff8900, #ff7700, rgb(255, 55, 0))"
   document.getElementById("salsabbqvegetariana").style.color = "#fff"
-  document.getElementById("salsabbqvegetariana").style.fontSize = "170%"
+  document.getElementById("salsabbqvegetariana").style.fontSize = "180%"
   document.getElementById("salsapizzavegetariana").style.background = "#fff"
   document.getElementById("salsapizzavegetariana").style.color = "#ff7700"
   document.getElementById("salsapizzavegetariana").style.fontSize = "150%"
@@ -57,7 +57,7 @@ function cambiarcolormasatradicionalvegetariana(){
   document.getElementById("masadelgadavegetariana").style.fontSize = "150%"
   document.getElementById("masatradicionalvegetariana").style.background = "linear-gradient(#ff8900, #ff7700, rgb(255, 55, 0))"
   document.getElementById("masatradicionalvegetariana").style.color = "#fff"
-  document.getElementById("masatradicionalvegetariana").style.fontSize = "170%"
+  document.getElementById("masatradicionalvegetariana").style.fontSize = "180%"
   document.getElementById("input-vegetariana-masa").value = 'MASA TRADICIONAL';
 }
 
@@ -67,76 +67,245 @@ function cambiarcolormasadelgadavegetariana(){
   document.getElementById("masatradicionalvegetariana").style.fontSize = "150%"
   document.getElementById("masadelgadavegetariana").style.background = "linear-gradient(#ff8900, #ff7700, rgb(255, 55, 0))"
   document.getElementById("masadelgadavegetariana").style.color = "#fff"
-  document.getElementById("masadelgadavegetariana").style.fontSize = "170%"
+  document.getElementById("masadelgadavegetariana").style.fontSize = "180%"
   document.getElementById("input-vegetariana-masa").value = 'MASA DELGADA';
 }
 
 
-function vegetarianamedianasx() {
-  document.getElementById("input-vegetariana-precio").value = '$6.000';
+
+
+function vegetarianamedianas() {
+  document.getElementById("input-vegetariana-precio").value = '8990';
   document.getElementById("input-vegetariana-cantidad").value = '1';
   document.getElementById("input-vegetariana-tamaño").value = 'MEDIANA';
-  document.getElementById("input-vegetariana-pizza").value = 'VEGETARIANA';
+  document.getElementById("input-vegetariana-pizza").value = 'ITALIANA';
+
+  
+// -italiana-
+document.getElementById("1italianamedianas").hidden = true;
+document.getElementById("1italianamedianasuno").hidden = false;
+
+// -----------------------------------------------------------
+// -hawaiana-
+document.getElementById("1hawaianamedianas").hidden = true;
+document.getElementById("1hawaianamedianasuno").hidden = false;
+
+// -napolitana-
+document.getElementById("1napolitanamedianas").hidden = true;
+document.getElementById("1napolitanamedianasuno").hidden = false;
+
+// -super-pepperoni-
+document.getElementById("1superpepperonimedianas").hidden = true;
+document.getElementById("1superpepperonimedianasuno").hidden = false;
+
+// -vegetariana-
+document.getElementById("1vegetarianamedianas").hidden = true;
+document.getElementById("1vegetarianamedianasuno").hidden = false;
+
+// -luco-pizza-
+document.getElementById("1lucopizzamedianas").hidden = true;
+document.getElementById("1lucopizzamedianasuno").hidden = false;
+
+// -pollo-bbq-
+document.getElementById("1pollobbqmedianas").hidden = true;
+document.getElementById("1pollobbqmedianasuno").hidden = false;
+
+// -chillian-
+document.getElementById("1chillianmedianas").hidden = true;
+document.getElementById("1chillianmedianasuno").hidden = false;
+
+// -cheeseburger-
+document.getElementById("1cheeseburgerfamiliares").hidden = true;
+document.getElementById("1cheeseburgerfamiliaresuno").hidden = false;
   
   }
 
 
-function vegetarianamedianas() {
-document.getElementById("input-vegetariana-precio").value = '$8.990';
+
+
+
+  function vegetarianabuttonoff() {
+    document.getElementById("medianavegetariana").disabled = true;
+    document.getElementById("medianavegetariana").style.background = "#fff"
+    document.getElementById("medianavegetariana").style.color = "#b8b8b8"
+    document.getElementById("medianavegetariana").style.border = "4px solid #b8b8b8"
+    document.getElementById("familiarvegetariana").disabled = true;
+    document.getElementById("familiarvegetariana").style.background = "#fff"
+    document.getElementById("familiarvegetariana").style.color = "#b8b8b8"
+    document.getElementById("familiarvegetariana").style.border = "4px solid #b8b8b8"
+
+  }
+
+
+
+
+
+
+
+function vegetarianamedianasuno() {
+document.getElementById("input-vegetariana-precio").value = '6000';
 document.getElementById("input-vegetariana-cantidad").value = '1';
 document.getElementById("input-vegetariana-tamaño").value = 'MEDIANA';
-document.getElementById("input-vegetariana-pizza").value = 'VEGETARIANA';
+document.getElementById("input-vegetariana-pizza").value = 'ITALIANA';
+
+// -italiana-
+document.getElementById("1italianamedianas").hidden = false;
+document.getElementById("1italianamedianasuno").hidden = true;
+
+// -----------------------------------------------------------
+// -hawaiana-
+document.getElementById("1hawaianamedianas").hidden = false;
+document.getElementById("1hawaianamedianasuno").hidden = true;
+
+// -napolitana-
+document.getElementById("1napolitanamedianas").hidden = false;
+document.getElementById("1napolitanamedianasuno").hidden = true;
+
+// -super-pepperoni-
+document.getElementById("1superpepperonimedianas").hidden = false;
+document.getElementById("1superpepperonimedianasuno").hidden = true;
+
+// -vegetariana-
+document.getElementById("1vegetarianamedianas").hidden = false;
+document.getElementById("1vegetarianamedianasuno").hidden = true;
+
+// -luco-pizza-
+document.getElementById("1lucopizzamedianas").hidden = false;
+document.getElementById("1lucopizzamedianasuno").hidden = true;
+
+// -pollo-bbq-
+document.getElementById("1pollobbqmedianas").hidden = false;
+document.getElementById("1pollobbqmedianasuno").hidden = true;
+
+// -chillian-
+document.getElementById("1chillianmedianas").hidden = false;
+document.getElementById("1chillianmedianasuno").hidden = true;
+
+// -cheeseburger-
+document.getElementById("1cheeseburgerfamiliares").hidden = true;
+document.getElementById("1cheeseburgerfamiliaresuno").hidden = false;
 
 }
 
+
+
+
 function vegetarianamedianasdos() {
-document.getElementById("input-vegetariana-precio").value = '$14.990';
+document.getElementById("input-vegetariana-precio").value = '14990';
 document.getElementById("input-vegetariana-cantidad").value = '2';
 
 
 }
 
 function vegetarianamedianastres() {
-document.getElementById("input-vegetariana-precio").value = '$23.980';
+document.getElementById("input-vegetariana-precio").value = '23980';
 document.getElementById("input-vegetariana-cantidad").value = '3';
 
 }
 
 function vegetarianamedianascuatro() {
-document.getElementById("input-vegetariana-precio").value = '$29.980';
+document.getElementById("input-vegetariana-precio").value = '29980';
 document.getElementById("input-vegetariana-cantidad").value = '4';
 
 }
 
 
-function vegetarianafamiliaresx() {
-  document.getElementById("input-vegetariana-precio").value = '$7.000';
+function vegetarianafamiliaresuno() {
+  document.getElementById("input-vegetariana-precio").value = '7000';
   document.getElementById("input-vegetariana-cantidad").value = '1';
   document.getElementById("input-vegetariana-tamaño").value = 'FAMILIAR';
   document.getElementById("input-vegetariana-pizza").value = 'VEGETARIANA';
+
+  // -italiana-
+document.getElementById("1italianafamiliares").hidden = false;
+document.getElementById("1italianafamiliaresuno").hidden = true;
+
+// -----------------------------------------------------------
+// -hawaiana-
+document.getElementById("1hawaianafamiliares").hidden = false;
+document.getElementById("1hawaianafamiliaresuno").hidden = true;
+
+// -napolitana-
+document.getElementById("1napolitanafamiliares").hidden = false;
+document.getElementById("1napolitanafamiliaresuno").hidden = true;
+
+// -super-pepperoni-
+document.getElementById("1superpepperonifamiliares").hidden = false;
+document.getElementById("1superpepperonifamiliaresuno").hidden = true;
+
+// -vegetariana-
+document.getElementById("1vegetarianafamiliares").hidden = false;
+document.getElementById("1vegetarianafamiliaresuno").hidden = true;
+
+// -luco-pizza-
+document.getElementById("1lucopizzafamiliares").hidden = false;
+document.getElementById("1lucopizzafamiliaresuno").hidden = true;
+
+// -pollo-bbq-
+document.getElementById("1pollobbqfamiliares").hidden = false;
+document.getElementById("1pollobbqfamiliaresuno").hidden = true;
+
+// -chillian-
+document.getElementById("1chillianfamiliares").hidden = false;
+document.getElementById("1chillianfamiliaresuno").hidden = true;
   }
 
 
 
 function vegetarianafamiliares() {
-document.getElementById("input-vegetariana-precio").value = '$10.990';
+document.getElementById("input-vegetariana-precio").value = '10990';
 document.getElementById("input-vegetariana-cantidad").value = '1';
 document.getElementById("input-vegetariana-tamaño").value = 'FAMILIAR';
 document.getElementById("input-vegetariana-pizza").value = 'VEGETARIANA';
+
+  
+// -italiana-
+document.getElementById("1italianafamiliares").hidden = true;
+document.getElementById("1italianafamiliaresuno").hidden = false;
+
+// -----------------------------------------------------------
+// -hawaiana-
+document.getElementById("1hawaianafamiliares").hidden = true;
+document.getElementById("1hawaianafamiliaresuno").hidden = false;
+
+// -napolitana-
+document.getElementById("1napolitanafamiliares").hidden = true;
+document.getElementById("1napolitanafamiliaresuno").hidden = false;
+
+// -super-pepperoni-
+document.getElementById("1superpepperonifamiliares").hidden = true;
+document.getElementById("1superpepperonifamiliaresuno").hidden = false;
+
+// -vegetariana-
+document.getElementById("1vegetarianafamiliares").hidden = true;
+document.getElementById("1vegetarianafamiliaresuno").hidden = false;
+
+// -luco-pizza-
+document.getElementById("1lucopizzafamiliares").hidden = true;
+document.getElementById("1lucopizzafamiliaresuno").hidden = false;
+
+// -pollo-bbq-
+document.getElementById("1pollobbqfamiliares").hidden = true;
+document.getElementById("1pollobbqfamiliaresuno").hidden = false;
+
+// -chillian-
+document.getElementById("1chillianfamiliares").hidden = true;
+document.getElementById("1chillianfamiliaresuno").hidden = false;
+  
 }
 
 function vegetarianafamiliaresdos() {
-document.getElementById("input-vegetariana-precio").value = '$17.990';
+document.getElementById("input-vegetariana-precio").value = '17990';
 document.getElementById("input-vegetariana-cantidad").value = '2';
 }
 
 function vegetarianafamiliarestres() {
-document.getElementById("input-vegetariana-precio").value = '$28.990';
+document.getElementById("input-vegetariana-precio").value = '28990';
 document.getElementById("input-vegetariana-cantidad").value = '3';
 }
 
 function vegetarianafamiliarescuatro() {
-document.getElementById("input-vegetariana-precio").value = '$35.980';
+document.getElementById("input-vegetariana-precio").value = '35980';
 document.getElementById("input-vegetariana-cantidad").value = '4';
 }
 
@@ -158,6 +327,28 @@ function vegetarianapizza() {
     document.getElementById("inputs-vegetariana").hidden = true;
     document.getElementById("finalizar-pedido-button").hidden = true; 
     document.getElementById("volver-vegetariana").hidden = true; 
+    document.getElementById("medianavegetariana").disabled = false;
+    document.getElementById("familiarvegetariana").disabled = false;  
+    document.getElementById("familiarvegetariana").style.background = "#fff"
+    document.getElementById("familiarvegetariana").style.color = "#ff7700"
+    document.getElementById("familiarvegetariana").style.fontSize = "150%"
+    document.getElementById("familiarvegetariana").style.border = "4px solid #ff7700"
+    document.getElementById("medianavegetariana").style.background = "#fff"
+    document.getElementById("medianavegetariana").style.color = "#ff7700"
+    document.getElementById("medianavegetariana").style.fontSize = "150%"
+    document.getElementById("medianavegetariana").style.border = "4px solid #ff7700"
+    document.getElementById("masatradicionalvegetariana").style.background = "#fff"
+    document.getElementById("masatradicionalvegetariana").style.color = "#ff7700"
+    document.getElementById("masatradicionalvegetariana").style.fontSize = "150%"
+    document.getElementById("masatradicionalvegetariana").style.border = "4px solid #ff7700"
+    document.getElementById("masadelgadavegetariana").style.background = "#fff"
+    document.getElementById("masadelgadavegetariana").style.color = "#ff7700"
+    document.getElementById("masadelgadavegetariana").style.fontSize = "150%"
+    document.getElementById("masadelgadavegetariana").style.border = "4px solid #ff7700"
+    
+            // -vegetariana-
+document.getElementById("1vegetarianafamiliares").hidden = false;
+document.getElementById("1vegetarianafamiliaresuno").hidden = true;
     }
 
 
@@ -178,96 +369,7 @@ function vegetarianapizza() {
 
 
 
-      // Vegetariana
-      document.getElementById("finalizarpedido-vegetariana").hidden = false; 
-      document.getElementById("finalizarpedido-vegetarianax").hidden = true;
-      document.getElementById("1vegetarianamedianas").hidden = false;
-      document.getElementById("1vegetarianafamiliares").hidden = false;
-      document.getElementById("1vegetarianamedianasx").hidden = true;
-      document.getElementById("1vegetarianafamiliaresx").hidden = true;
-
- 
-
-      // Hawaiana
-      document.getElementById("finalizarpedido-hawaiana").hidden = false; 
-      document.getElementById("finalizarpedido-hawaianax").hidden = true;
-      document.getElementById("1hawaianamedianas").hidden = false;
-      document.getElementById("1hawaianafamiliares").hidden = false;
-      document.getElementById("1hawaianamedianasx").hidden = true;
-      document.getElementById("1hawaianafamiliaresx").hidden = true;
-
-
-  
-      // Napolitana
-      document.getElementById("finalizarpedido-napolitana").hidden = false; 
-      document.getElementById("finalizarpedido-napolitanax").hidden = true;
-      document.getElementById("1napolitanamedianas").hidden = false;
-      document.getElementById("1napolitanafamiliares").hidden = false;
-      document.getElementById("1napolitanamedianasx").hidden = true;
-      document.getElementById("1napolitanafamiliaresx").hidden = true;
-
-
-       // Italiana
-       document.getElementById("finalizarpedido-italiana").hidden = false; 
-       document.getElementById("finalizarpedido-italianax").hidden = true;
-       document.getElementById("1italianamedianas").hidden = false;
-       document.getElementById("1italianafamiliares").hidden = false;
-       document.getElementById("1italianamedianasx").hidden = true;
-       document.getElementById("1italianafamiliaresx").hidden = true;
-
-
-        // Pollo BBQ
-      document.getElementById("finalizarpedido-pollobbq").hidden = false; 
-      document.getElementById("finalizarpedido-pollobbqx").hidden = true;
-      document.getElementById("1pollobbqmedianas").hidden = false;
-      document.getElementById("1pollobbqfamiliares").hidden = false;
-      document.getElementById("1pollobbqmedianasx").hidden = true;
-      document.getElementById("1pollobbqfamiliaresx").hidden = true;
-
-
-
-
-      // Luco Pizza
-      document.getElementById("finalizarpedido-lucopizza").hidden = false; 
-      document.getElementById("finalizarpedido-lucopizzax").hidden = true;
-      document.getElementById("1lucopizzamedianas").hidden = false;
-      document.getElementById("1lucopizzafamiliares").hidden = false;
-      document.getElementById("1lucopizzamedianasx").hidden = true;
-      document.getElementById("1lucopizzafamiliaresx").hidden = true;
-
-
       
-
-  
-      // Chillian
-      document.getElementById("finalizarpedido-chillian").hidden = false; 
-      document.getElementById("finalizarpedido-chillianx").hidden = true;
-      document.getElementById("1chillianmedianas").hidden = false;
-      document.getElementById("1chillianfamiliares").hidden = false;
-      document.getElementById("1chillianmedianasx").hidden = true;
-      document.getElementById("1chillianfamiliaresx").hidden = true;
-
-
-
-
-
-      // Super Pepperoni
-      document.getElementById("finalizarpedido-superpepperoni").hidden = false; 
-      document.getElementById("finalizarpedido-superpepperonix").hidden = true;
-      document.getElementById("1superpepperonimedianas").hidden = false;
-      document.getElementById("1superpepperonifamiliares").hidden = false;
-      document.getElementById("1superpepperonimedianasx").hidden = true;
-      document.getElementById("1superpepperonifamiliaresx").hidden = true;
-
-      
-
-  // This.Pizza
-      document.getElementById("1vegetarianamedianas").hidden = true;
-      document.getElementById("1vegetarianafamiliares").hidden = true;
-
-
-
-
 
 
       document.getElementById("audio");
@@ -341,93 +443,6 @@ function vegetarianapizza() {
       var nota=document.getElementById("instrucciones-vegetariana").value;
       document.getElementById("input-vegetariana-instrucciones").value= nota;
       document.getElementById("volver-vegetariana-html").hidden = true; 
-
-           // Italiana
-           document.getElementById("finalizarpedido-italiana").hidden = true; 
-           document.getElementById("finalizarpedido-italianax").hidden = false;
-           document.getElementById("1italianamedianas").hidden = true;
-           document.getElementById("1italianafamiliares").hidden = true;
-           document.getElementById("1italianamedianasx").hidden = false;
-           document.getElementById("1italianafamiliaresx").hidden = false;
-     
-      
-     
-           // Hawaiana
-           document.getElementById("finalizarpedido-hawaiana").hidden = true; 
-           document.getElementById("finalizarpedido-hawaianax").hidden = false;
-           document.getElementById("1hawaianamedianas").hidden = true;
-           document.getElementById("1hawaianafamiliares").hidden = true;
-           document.getElementById("1hawaianamedianasx").hidden = false;
-           document.getElementById("1hawaianafamiliaresx").hidden = false;
-     
-     
-       
-           // Napolitana
-           document.getElementById("finalizarpedido-napolitana").hidden = true; 
-           document.getElementById("finalizarpedido-napolitanax").hidden = false;
-           document.getElementById("1napolitanamedianas").hidden = true;
-           document.getElementById("1napolitanafamiliares").hidden = true;
-           document.getElementById("1napolitanamedianasx").hidden = false;
-           document.getElementById("1napolitanafamiliaresx").hidden = false;
-     
-     
-            // Vegetariana
-            document.getElementById("finalizarpedido-vegetariana").hidden = true; 
-            document.getElementById("finalizarpedido-vegetarianax").hidden = false;
-            document.getElementById("1vegetarianamedianas").hidden = true;
-            document.getElementById("1vegetarianafamiliares").hidden = true;
-            document.getElementById("1vegetarianamedianasx").hidden = false;
-            document.getElementById("1vegetarianafamiliaresx").hidden = false;
-     
-     
-             // Pollo BBQ
-           document.getElementById("finalizarpedido-pollobbq").hidden = true; 
-           document.getElementById("finalizarpedido-pollobbqx").hidden = false;
-           document.getElementById("1pollobbqmedianas").hidden = true;
-           document.getElementById("1pollobbqfamiliares").hidden = true;
-           document.getElementById("1pollobbqmedianasx").hidden = false;
-           document.getElementById("1pollobbqfamiliaresx").hidden = false;
-     
-     
-     
-     
-           // Luco Pizza
-           document.getElementById("finalizarpedido-lucopizza").hidden = true; 
-           document.getElementById("finalizarpedido-lucopizzax").hidden = false;
-           document.getElementById("1lucopizzamedianas").hidden = true;
-           document.getElementById("1lucopizzafamiliares").hidden = true;
-           document.getElementById("1lucopizzamedianasx").hidden = false;
-           document.getElementById("1lucopizzafamiliaresx").hidden = false;
-     
-     
-           
-     
-       
-           // Chillian
-           document.getElementById("finalizarpedido-chillian").hidden = true; 
-           document.getElementById("finalizarpedido-chillianx").hidden = false;
-           document.getElementById("1chillianmedianas").hidden = true;
-           document.getElementById("1chillianfamiliares").hidden = true;
-           document.getElementById("1chillianmedianasx").hidden = false;
-           document.getElementById("1chillianfamiliaresx").hidden = false;
-     
-     
-     
-     
-     
-           // Super Pepperoni
-           document.getElementById("finalizarpedido-superpepperoni").hidden = true; 
-           document.getElementById("finalizarpedido-superpepperonix").hidden = false;
-           document.getElementById("1superpepperonimedianas").hidden = true;
-           document.getElementById("1superpepperonifamiliares").hidden = true;
-           document.getElementById("1superpepperonimedianasx").hidden = false;
-           document.getElementById("1superpepperonifamiliaresx").hidden = false;
-     
-           
-     
-       // This.Pizza
-           document.getElementById("1vegetarianamedianas").hidden = false;
-           document.getElementById("1vegetarianafamiliares").hidden = false;
 
       document.getElementById("audio");
       audio.play();

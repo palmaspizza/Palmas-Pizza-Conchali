@@ -854,35 +854,18 @@ h2 {
 
 img, video, object { max-width:100%; }
 
-#submit {
-  -webkit-text-stroke-width: 0.px;
-  -webkit-text-stroke-color: black;
-  -webkit-text
-
-  
-}
-
-
-
-
-.pizzasform1 {
-}
-
-.pizzasform2 {
-}
 
 
 .buttons {
-  color: white;
+  color: #fff;
   padding: 10px;
   box-shadow: black 10px;
   background: linear-gradient(#ff8900, #ff7700, rgb(255, 55, 0));
-  border: #db8046;
+  border-color: #db8046;
   border-radius: 6px;
   padding: 10px;
   font-family: 'Franklin Gothic Medium';
   text-align: center;
-  padding: 10;
   font-size: 180% !important;
 }
 
@@ -1046,14 +1029,7 @@ input[type="text"] {
     overflow: auto;
     cursor: default;
   }
-  
-  .modal-dialog > * {
 
-  }
-  
-  .modal-header,
-  .modal-footer {
-  }
   
   .modal-header {
     display: flex;
@@ -1065,9 +1041,9 @@ input[type="text"] {
     font-size: 45px;
   }
   
-  .modal p + p {
+
   
-  }
+
 
 
 
@@ -1162,6 +1138,7 @@ font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	width: 100%; 
 }
 .contenido h3{
+  
 }
 .contenido p{
 
@@ -1275,7 +1252,7 @@ font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     display: block;
     width: 50%;
     font-size: 180%;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 2px;
     position: relative;
   }
@@ -1797,14 +1774,6 @@ h2 {
 }
 
 img, video, object { max-width:100%; }
-
-#submit {
-  -webkit-text-stroke-width: 0.px;
-  -webkit-text-stroke-color: black;
-  -webkit-text
-  color: ;
-}
-
 
 
 .buttons {

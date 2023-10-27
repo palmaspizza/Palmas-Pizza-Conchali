@@ -6,16 +6,32 @@
     <title>Palmas Pizza</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/PalmasPizzaIMG/palmaspizzalogo.png">
-    <link rel="stylesheet" href="palmaspizza.css">
-    <link rel="stylesheet" href="ventanas.css">
+    <link rel="stylesheet" href="/Index/palmaspizza.css">
+    <link rel="stylesheet" href="/Index/ventanas.css">
      <link rel="stylesheet" href="/Index/pizzas.css">
 </head><meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <header>
 
+<script>
+   function sumartodo(){
+    try {
 
+      var italiana= parseFloat(document.getElementById("input-italiana-precio").value) || 0,
+     hawaiana= parseFloat(document.getElementById("input-hawaiana-precio").value) || 0,
+     napolitana= parseFloat(document.getElementById("input-napolitana-precio").value) || 0,
+     superpepperoni= parseFloat(document.getElementById("input-superpepperoni-precio").value) || 0,
+     vegetariana= parseFloat(document.getElementById("input-vegetariana-precio").value) || 0,
+     lucopizza= parseFloat(document.getElementById("input-lucopizza-precio").value) || 0,
+     pollobbq= parseFloat(document.getElementById("input-pollobbq-precio").value) || 0,
+     chillian= parseFloat(document.getElementById("input-chillian-precio").value) || 0;
+    
+  document.getElementById("total").value = italiana + hawaiana + napolitana + superpepperoni + vegetariana + lucopizza + pollobbq + chillian;
+    } catch (e) {}
+  }
+</script>
   
-  
+
     <center>
         <div class="headernav">
           <audio hidden id="audio" controls>
@@ -31,7 +47,8 @@
         
         </button>  
           
-        <input class="carrofixedheader" type="number" id="total" value="$0" data-open="carrito-palmaspizza">
+        <input class="carrofixedheader" type="number" id="total" style="cursor: none;" readonly disabled  data-open="carrito-palmaspizza">
+     
           
          
          </div>
@@ -85,15 +102,23 @@
            <div id="inputs-italiana" hidden>
             <div style="box-shadow: 0px -5px 57px 7px rgba(255, 123, 0, 0.523);  display: grid; place-items: center; border: #ff8000 solid 4px; border-bottom: 0px; background-color: #00000015; width: 98%; height: 150px; z-index: 1; position: relative; margin: auto;">
               <img src="/Pizzas/italiana.png" alt="" readonly style="width: 100px; position: absolute; margin-left: -70%; margin-top: 50px;">
+              <label for="italianapizza"></label>
               <input type="text"  id="input-italiana-pizza" readonly style="background-color: transparent; border: 0px; text-align: start; padding: 0;  font-size: 240%; min-width: 20%; width: 300px; max-width: 80%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-left: 5px; color: black;"> <br>
-               <input  type="text" id="input-italiana-masa" readonly style="background-color: transparent; border: 0px; color: #ff6a00; text-align: center; padding: 0;  font-size: 215%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 220px; ">
-              <input type="text" id="input-italiana-tamaño" readonly style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 290%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
-              <input type="text"  id="input-italiana-cantidad" class="numpizzas" value="0" value="0" readonly style="background-color: transparent; border: 0px;  width: 40px; font-size: 480%; font-family: Impact; text-align: start; height: 55px; position: absolute; margin-left: -90%; margin-top: -90px; color: #ff6a04;">
+              <label for="italianamasa"></label> 
+              <input  type="text" id="input-italiana-masa" readonly style="background-color: transparent; border: 0px; color: #ff6a00; text-align: center; padding: 0;  font-size: 215%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 220px; ">
+              <label for="italianatamaño"></label>
+               <input type="text" id="input-italiana-tamaño" readonly style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 290%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
+              <label for="italianacantidad"></label>
+              <input type="text"  id="input-italiana-cantidad" class="numpizzas"   readonly style="background-color: transparent; border: 0px;  width: 40px; font-size: 480%; font-family: Impact; text-align: start; height: 55px; position: absolute; margin-left: -90%; margin-top: -90px; color: #ff6a04;">
              
                
               <input type="text"  id="input-italiana-precio" readonly style="background-color: transparent; border: 0px; padding-left: 5px; color: #ff6a00; font-size: 160%; font-family: Arial, Helvetica, sans-serif; position: fixed;  max-width: 85px; position: absolute; margin-left: -75%; margin-top: 110px; background-color: #ff5500; color: rgb(255, 255, 255);">
-                <input type="text" placeholder="Nota:" id="input-italiana-instrucciones"  style="z-index: 1065700 !important; background-color: #e2e2e2 !important; border: 0px; padding-left: 5px; color: #ff6a00; background-color: #00000015; font-size: 160%; font-family: Arial, Helvetica, sans-serif; position: relative;  width: 102%; height: auto; padding-top: 5px; border-top: 0px; border-bottom: #ff6a04 solid 5px; border-left: #ff8000  solid 4px ; border-right: #ff8000 solid 4px; margin-top: 13px; ">
+              <label for="instruccionesitaliana"></label>  
+              <input type="text" placeholder="Nota:" id="input-italiana-instrucciones"  style="z-index: 1065700 !important; background-color: #e2e2e2 !important; border: 0px; padding-left: 5px; color: #ff6a00; background-color: #00000015; font-size: 160%; font-family: Arial, Helvetica, sans-serif; position: relative;  width: 102%; height: auto; padding-top: 5px; border-top: 0px; border-bottom: #ff6a04 solid 5px; border-left: #ff8000  solid 4px ; border-right: #ff8000 solid 4px; margin-top: 13px; ">
                        <button type="button" style="background: rgb(255, 0, 0); color: #fff; margin-top: -180px; margin-left: 92%; position: absolute; width: 40px; height: 35px; border: #ff8000 solid 4px; border-bottom: 0px;" onclick="borrarpedidoitaliana();">✖</button>
+                     
+                     
+                     <!-- EDITAR -->
                        <img src="https://cdn-icons-png.flaticon.com/512/4226/4226577.png" style="color: #fff; margin-top: -110px; margin-left: 92%; position: absolute; width: 40px; height: 40px; border-bottom: #ff8000; cursor: pointer;" data-open="italiana-html" onclick="volveritaliana();" alt="">
               </div>
            </div>
@@ -118,14 +143,20 @@
 <div id="inputs-napolitana" hidden>
   <div style="box-shadow: 0px -5px 57px 7px rgba(255, 123, 0, 0.523); display: grid; place-items: center; border: #ff8000 solid 4px; border-bottom: 0px; background-color: #00000015; width: 98%; height: 150px; z-index: 1; position: relative; margin: auto;">
     <img src="/Pizzas/napolitana.png" alt="" readonly style="width: 100px; position: absolute; margin-left: -70%; margin-top: 50px;">
+    
+    <label for="napolitanapizza"></label>
     <input type="text"  id="input-napolitana-pizza" readonly style="background-color: transparent; border: 0px; text-align: start; padding: 0;  font-size: 240%; min-width: 20%; width: 300px; max-width: 80%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-left: 5px; color: black;"> <br>
-     <input  type="text" id="input-napolitana-masa" readonly style="background-color: transparent; border: 0px; color: #ff6a00; text-align: center; padding: 0;  font-size: 215%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 220px; ">
+    <label for="napolitanamasa"></label>
+    <input  type="text" id="input-napolitana-masa" readonly style="background-color: transparent; border: 0px; color: #ff6a00; text-align: center; padding: 0;  font-size: 215%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 220px; ">
+    <label for="napolitanatamaño"></label>
     <input type="text" id="input-napolitana-tamaño" readonly style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 290%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
-    <input type="text"  id="input-napolitana-cantidad" class="numpizzas" value="0" readonly style="background-color: transparent; border: 0px;  width: 40px; font-size: 480%; font-family: Impact; text-align: start; height: 55px; position: absolute; margin-left: -90%; margin-top: -90px; color: #ff6a04;">
+    <label for="napolitanacantidad"></label>
+    <input type="text"  id="input-napolitana-cantidad" class="numpizzas"  readonly style="background-color: transparent; border: 0px;  width: 40px; font-size: 480%; font-family: Impact; text-align: start; height: 55px; position: absolute; margin-left: -90%; margin-top: -90px; color: #ff6a04;">
    
      
     <input type="text"  id="input-napolitana-precio" readonly style="background-color: transparent; border: 0px; padding-left: 5px; color: #ff6a00; font-size: 160%; font-family: Arial, Helvetica, sans-serif; position: fixed;  max-width: 85px; position: absolute; margin-left: -75%; margin-top: 110px; background-color: #ff5500; color: rgb(255, 255, 255);">
-      <input type="text" placeholder="Nota:" id="input-napolitana-instrucciones"  style="z-index: 1065700 !important; background-color: #e2e2e2 !important; border: 0px; padding-left: 5px; color: #ff6a00; background-color: #00000015; font-size: 160%; font-family: Arial, Helvetica, sans-serif; position: relative;  width: 102%; height: auto; padding-top: 5px; border-top: 0px; border-bottom: #ff6a04 solid 5px; border-left: #ff8000  solid 4px ; border-right: #ff8000 solid 4px; margin-top: 13px; ">
+     <label for="instruccionesnapolitana"></label> 
+     <input type="text" placeholder="Nota:" id="input-napolitana-instrucciones"  style="z-index: 1065700 !important; background-color: #e2e2e2 !important; border: 0px; padding-left: 5px; color: #ff6a00; background-color: #00000015; font-size: 160%; font-family: Arial, Helvetica, sans-serif; position: relative;  width: 102%; height: auto; padding-top: 5px; border-top: 0px; border-bottom: #ff6a04 solid 5px; border-left: #ff8000  solid 4px ; border-right: #ff8000 solid 4px; margin-top: 13px; ">
              <button type="button" style="background: rgb(255, 0, 0); color: #fff; margin-top: -180px; margin-left: 92%; position: absolute; width: 40px; height: 35px; border: #ff8000 solid 4px; border-bottom: 0px;" onclick="borrarpedidonapolitana();">✖</button>
              <img src="https://cdn-icons-png.flaticon.com/512/4226/4226577.png" style="color: #fff; margin-top: -110px; margin-left: 92%; position: absolute; width: 40px; height: 40px; border-bottom: #ff8000; cursor: pointer;" data-open="napolitana-html" onclick="volvernapolitana();" alt="">
     </div>
@@ -133,9 +164,7 @@
     <!-- FIN INPUTS NAPOLITANA  -->
 
     <br>
-    <br><br>
-<br><br><br>
-
+    <br><br><br><br><br>
 
 
 
@@ -147,79 +176,98 @@
     <input type="text"  id="input-hawaiana-pizza" readonly style="background-color: transparent; border: 0px; text-align: start; padding: 0;  font-size: 240%; min-width: 20%; width: 300px; max-width: 80%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-left: 5px; color: black;"> <br>
      <input  type="text" id="input-hawaiana-masa" readonly style="background-color: transparent; border: 0px; color: #ff6a00; text-align: center; padding: 0;  font-size: 215%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 220px; ">
     <input type="text" id="input-hawaiana-tamaño" readonly style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 290%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
-    <input type="text"  id="input-hawaiana-cantidad" class="numpizzas" value="0" readonly style="background-color: transparent; border: 0px;  width: 40px; font-size: 480%; font-family: Impact; text-align: start; height: 55px; position: absolute; margin-left: -90%; margin-top: -90px; color: #ff6a04;">
+    <input type="text"  id="input-hawaiana-cantidad" class="numpizzas"  readonly style="background-color: transparent; border: 0px;  width: 40px; font-size: 480%; font-family: Impact; text-align: start; height: 55px; position: absolute; margin-left: -90%; margin-top: -90px; color: #ff6a04;">
    
      
     <input type="text"  id="input-hawaiana-precio" readonly style="background-color: transparent; border: 0px; padding-left: 5px; color: #ff6a00; font-size: 160%; font-family: Arial, Helvetica, sans-serif; position: fixed;  max-width: 85px; position: absolute; margin-left: -75%; margin-top: 110px; background-color: #ff5500; color: rgb(255, 255, 255);">
-      <input type="text" placeholder="Nota:" id="input-hawaiana-instrucciones"  style="z-index: 1065700 !important; background-color: #e2e2e2 !important; border: 0px; padding-left: 5px; color: #ff6a00; background-color: #00000015; font-size: 160%; font-family: Arial, Helvetica, sans-serif; position: relative;  width: 102%; height: auto; padding-top: 5px; border-top: 0px; border-bottom: #ff6a04 solid 5px; border-left: #ff8000  solid 4px ; border-right: #ff8000 solid 4px; margin-top: 13px; ">
+    <label for="instruccioneshawaiana"></label>
+    <input type="text" placeholder="Nota:" id="input-hawaiana-instrucciones"  style="z-index: 1065700 !important; background-color: #e2e2e2 !important; border: 0px; padding-left: 5px; color: #ff6a00; background-color: #00000015; font-size: 160%; font-family: Arial, Helvetica, sans-serif; position: relative;  width: 102%; height: auto; padding-top: 5px; border-top: 0px; border-bottom: #ff6a04 solid 5px; border-left: #ff8000  solid 4px ; border-right: #ff8000 solid 4px; margin-top: 13px; ">
              <button type="button" style="background: rgb(255, 0, 0); color: #fff; margin-top: -180px; margin-left: 92%; position: absolute; width: 40px; height: 35px; border: #ff8000 solid 4px; border-bottom: 0px;" onclick="borrarpedidohawaiana();">✖</button>
              <img src="https://cdn-icons-png.flaticon.com/512/4226/4226577.png" style="color: #fff; margin-top: -110px; margin-left: 92%; position: absolute; width: 40px; height: 40px; border-bottom: #ff8000; cursor: pointer;" data-open="hawaiana-html" onclick="volverhawaiana();" alt="">
     </div>
  </div>
     
-            
-                  <br>
-                  <br><br><br><br>
+ <br>
+ <br><br><br><br><br>
 
 
                   <!-- INICIO INPUTS SUPER PEPERONI  -->
                   <div id="inputs-superpepperoni" hidden>
                     <div style="box-shadow: 0px -5px 57px 7px rgba(255, 123, 0, 0.523); display: grid; place-items: center; border: #ff8000 solid 4px; border-bottom: 0px; background-color: #00000015; width: 98%; height: 150px; z-index: 1; position: relative; margin: auto;">
                       <img src="/Pizzas/superpepperoni.png" alt="" readonly style="width: 100px; position: absolute; margin-left: -70%; margin-top: 50px;">
+                     <label for="superpepperonipizza"></label>
                       <input type="text"  id="input-superpepperoni-pizza" readonly style="background-color: transparent; border: 0px; text-align: start; padding: 0;  font-size: 240%; min-width: 20%; width: 300px; max-width: 80%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-left: 5px; color: black;"> <br>
-                       <input  type="text" id="input-superpepperoni-masa" readonly style="background-color: transparent; border: 0px; color: #ff6a00; text-align: center; padding: 0;  font-size: 215%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 220px; ">
-                      <input type="text" id="input-superpepperoni-tamaño" readonly style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 290%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
-                      <input type="text"  id="input-superpepperoni-cantidad" class="numpizzas" value="0" readonly style="background-color: transparent; border: 0px;  width: 40px; font-size: 480%; font-family: Impact; text-align: start; height: 55px; position: absolute; margin-left: -90%; margin-top: -90px; color: #ff6a04;">
+                      <label for="superpepperonimasa"></label> 
+                      <input  type="text" id="input-superpepperoni-masa" readonly style="background-color: transparent; border: 0px; color: #ff6a00; text-align: center; padding: 0;  font-size: 215%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 220px; ">
+                     <label for="superpepperonitamaño"></label>
+                       <input type="text" id="input-superpepperoni-tamaño" readonly style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 290%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
+                      <label for="superpepperonicantidad"></label>
+                      <input type="text"  id="input-superpepperoni-cantidad" class="numpizzas"  readonly style="background-color: transparent; border: 0px;  width: 40px; font-size: 480%; font-family: Impact; text-align: start; height: 55px; position: absolute; margin-left: -90%; margin-top: -90px; color: #ff6a04;">
                      
                        
                       <input type="text"  id="input-superpepperoni-precio" readonly style="background-color: transparent; border: 0px; padding-left: 5px; color: #ff6a00; font-size: 160%; font-family: Arial, Helvetica, sans-serif; position: fixed;  max-width: 85px; position: absolute; margin-left: -75%; margin-top: 110px; background-color: #ff5500; color: rgb(255, 255, 255);">
-                        <input type="text" placeholder="Nota:" id="input-superpepperoni-instrucciones"  style="z-index: 1065700 !important; background-color: #e2e2e2 !important; border: 0px; padding-left: 5px; color: #ff6a00; background-color: #00000015; font-size: 160%; font-family: Arial, Helvetica, sans-serif; position: relative;  width: 102%; height: auto; padding-top: 5px; border-top: 0px; border-bottom: #ff6a04 solid 5px; border-left: #ff8000  solid 4px ; border-right: #ff8000 solid 4px; margin-top: 13px; ">
+                      <label for="instruccionessuperpepperoni"></label>
+                      <input type="text" placeholder="Nota:" id="input-superpepperoni-instrucciones"  style="z-index: 1065700 !important; background-color: #e2e2e2 !important; border: 0px; padding-left: 5px; color: #ff6a00; background-color: #00000015; font-size: 160%; font-family: Arial, Helvetica, sans-serif; position: relative;  width: 102%; height: auto; padding-top: 5px; border-top: 0px; border-bottom: #ff6a04 solid 5px; border-left: #ff8000  solid 4px ; border-right: #ff8000 solid 4px; margin-top: 13px; ">
                                <button type="button" style="background: rgb(255, 0, 0); color: #fff; margin-top: -180px; margin-left: 92%; position: absolute; width: 40px; height: 35px; border: #ff8000 solid 4px; border-bottom: 0px;" onclick="borrarpedidosuperpepperoni();">✖</button>
                                <img src="https://cdn-icons-png.flaticon.com/512/4226/4226577.png" style="color: #fff; margin-top: -110px; margin-left: 92%; position: absolute; width: 40px; height: 40px; border-bottom: #ff8000; cursor: pointer;" data-open="superpepperoni-html" onclick="volversuperpepperoni();" alt="">
                       </div>
                    </div>
                       <!-- FIN INPUTS SUPER PEPERONI  -->
-                  
+                      <br>
+                      <br><br><br><br><br>
 
                      <!-- INICIO INPUTS VEGETARIANA  -->
        <div id="inputs-vegetariana" hidden>
         <div style="box-shadow: 0px -5px 57px 7px rgba(255, 123, 0, 0.523); display: grid; place-items: center; border: #ff8000 solid 4px; border-bottom: 0px; background-color: #00000015; width: 98%; height: 150px; z-index: 1; position: relative; margin: auto;">
           <img src="/Pizzas/vegetariana.png" alt="" readonly style="width: 100px; position: absolute; margin-left: -70%; margin-top: 50px;">
+         
+          <label for="vegetarianapizza"></label>
           <input type="text"  id="input-vegetariana-pizza" readonly style="background-color: transparent; border: 0px; text-align: start; padding: 0;  font-size: 240%; min-width: 20%; width: 300px; max-width: 80%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-left: 5px; color: black;"> <br>
-           <input  type="text" id="input-vegetariana-masa" readonly style="background-color: transparent; border: 0px; color: #ff6a00; text-align: center; padding: 0;  font-size: 215%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 220px; ">
-          <input type="text" id="input-vegetariana-tamaño" readonly style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 290%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
-          <input type="text"  id="input-vegetariana-cantidad" class="numpizzas" value="0" readonly style="background-color: transparent; border: 0px;  width: 40px; font-size: 480%; font-family: Impact; text-align: start; height: 55px; position: absolute; margin-left: -90%; margin-top: -90px; color: #ff6a04;">
+         <label for="vegetarianamasa"></label>  
+          <input  type="text" id="input-vegetariana-masa" readonly style="background-color: transparent; border: 0px; color: #ff6a00; text-align: center; padding: 0;  font-size: 215%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 220px; ">
+          <label for="vegetarianatamaño"></label>
+           <input type="text" id="input-vegetariana-tamaño" readonly style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 290%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
+          <label for="vegetarianacantidad"></label>
+          <input type="text"  id="input-vegetariana-cantidad" class="numpizzas"  readonly style="background-color: transparent; border: 0px;  width: 40px; font-size: 480%; font-family: Impact; text-align: start; height: 55px; position: absolute; margin-left: -90%; margin-top: -90px; color: #ff6a04;">
          
            
           <input type="text"  id="input-vegetariana-precio" readonly style="background-color: transparent; border: 0px; padding-left: 5px; color: #ff6a00; font-size: 160%; font-family: Arial, Helvetica, sans-serif; position: fixed;  max-width: 85px; position: absolute; margin-left: -75%; margin-top: 110px; background-color: #ff5500; color: rgb(255, 255, 255);">
-            <input type="text" placeholder="Nota:" id="input-vegetariana-instrucciones"  style="z-index: 1065700 !important; background-color: #e2e2e2 !important; border: 0px; padding-left: 5px; color: #ff6a00; background-color: #00000015; font-size: 160%; font-family: Arial, Helvetica, sans-serif; position: relative;  width: 102%; height: auto; padding-top: 5px; border-top: 0px; border-bottom: #ff6a04 solid 5px; border-left: #ff8000  solid 4px ; border-right: #ff8000 solid 4px; margin-top: 13px; ">
+          <label for="instruccionesvegetariana"></label>  
+          <input type="text" placeholder="Nota:" id="input-vegetariana-instrucciones"  style="z-index: 1065700 !important; background-color: #e2e2e2 !important; border: 0px; padding-left: 5px; color: #ff6a00; background-color: #00000015; font-size: 160%; font-family: Arial, Helvetica, sans-serif; position: relative;  width: 102%; height: auto; padding-top: 5px; border-top: 0px; border-bottom: #ff6a04 solid 5px; border-left: #ff8000  solid 4px ; border-right: #ff8000 solid 4px; margin-top: 13px; ">
                    <button type="button" style="background: rgb(255, 0, 0); color: #fff; margin-top: -180px; margin-left: 92%; position: absolute; width: 40px; height: 35px; border: #ff8000 solid 4px; border-bottom: 0px;" onclick="borrarpedidovegetariana();">✖</button>
                    <img src="https://cdn-icons-png.flaticon.com/512/4226/4226577.png" style="color: #fff; margin-top: -110px; margin-left: 92%; position: absolute; width: 40px; height: 40px; border-bottom: #ff8000; cursor: pointer;" data-open="vegetariana-html" onclick="volvervegetariana();" alt="">
           </div>
        </div>
           <!-- FIN INPUTS VEGETARIANA  -->
-
+          <br>
+          <br><br><br><br><br>
 
           
        <!-- INICIO INPUTS LUCO PIZZA  -->
        <div id="inputs-lucopizza" hidden>
         <div style="box-shadow: 0px -5px 57px 7px rgba(255, 123, 0, 0.523); display: grid; place-items: center; border: #ff8000 solid 4px; border-bottom: 0px; background-color: #00000015; width: 98%; height: 150px; z-index: 1; position: relative; margin: auto;">
           <img src="/Pizzas/lucopizza.png" alt="" readonly style="width: 100px; position: absolute; margin-left: -70%; margin-top: 50px;">
+          <label for="lucopizzapizza"></label>
           <input type="text"  id="input-lucopizza-pizza" readonly style="background-color: transparent; border: 0px; text-align: start; padding: 0;  font-size: 240%; min-width: 20%; width: 300px; max-width: 80%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-left: 5px; color: black;"> <br>
-           <input  type="text" id="input-lucopizza-masa" readonly style="background-color: transparent; border: 0px; color: #ff6a00; text-align: center; padding: 0;  font-size: 215%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 220px; ">
-          <input type="text" id="input-lucopizza-tamaño" readonly style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 290%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
-          <input type="text"  id="input-lucopizza-cantidad" class="numpizzas" value="0" readonly style="background-color: transparent; border: 0px;  width: 40px; font-size: 480%; font-family: Impact; text-align: start; height: 55px; position: absolute; margin-left: -90%; margin-top: -90px; color: #ff6a04;">
+          <label for="lucopizzamasa"></label> 
+          <input  type="text" id="input-lucopizza-masa" readonly style="background-color: transparent; border: 0px; color: #ff6a00; text-align: center; padding: 0;  font-size: 215%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 220px; ">
+          <label for="lucopizzatamaño"></label>
+           <input type="text" id="input-lucopizza-tamaño" readonly style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 290%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
+         <label for="lucopizzacantidad"></label>
+          <input type="text"  id="input-lucopizza-cantidad" class="numpizzas"  readonly style="background-color: transparent; border: 0px;  width: 40px; font-size: 480%; font-family: Impact; text-align: start; height: 55px; position: absolute; margin-left: -90%; margin-top: -90px; color: #ff6a04;">
          
            
           <input type="text"  id="input-lucopizza-precio" readonly style="background-color: transparent; border: 0px; padding-left: 5px; color: #ff6a00; font-size: 160%; font-family: Arial, Helvetica, sans-serif; position: fixed;  max-width: 85px; position: absolute; margin-left: -75%; margin-top: 110px; background-color: #ff5500; color: rgb(255, 255, 255);">
-            <input type="text" placeholder="Nota:" id="input-lucopizza-instrucciones"  style="z-index: 1065700 !important; background-color: #e2e2e2 !important; border: 0px; padding-left: 5px; color: #ff6a00; background-color: #00000015; font-size: 160%; font-family: Arial, Helvetica, sans-serif; position: relative;  width: 102%; height: auto; padding-top: 5px; border-top: 0px; border-bottom: #ff6a04 solid 5px; border-left: #ff8000  solid 4px ; border-right: #ff8000 solid 4px; margin-top: 13px; ">
+          <label for="instruccioneslucopizza"></label> 
+          <input type="text" placeholder="Nota:" id="input-lucopizza-instrucciones"  style="z-index: 1065700 !important; background-color: #e2e2e2 !important; border: 0px; padding-left: 5px; color: #ff6a00; background-color: #00000015; font-size: 160%; font-family: Arial, Helvetica, sans-serif; position: relative;  width: 102%; height: auto; padding-top: 5px; border-top: 0px; border-bottom: #ff6a04 solid 5px; border-left: #ff8000  solid 4px ; border-right: #ff8000 solid 4px; margin-top: 13px; ">
                    <button type="button" style="background: rgb(255, 0, 0); color: #fff; margin-top: -180px; margin-left: 92%; position: absolute; width: 40px; height: 35px; border: #ff8000 solid 4px; border-bottom: 0px;" onclick="borrarpedidolucopizza();">✖</button>
                    <img src="https://cdn-icons-png.flaticon.com/512/4226/4226577.png" style="color: #fff; margin-top: -110px; margin-left: 92%; position: absolute; width: 40px; height: 40px; border-bottom: #ff8000; cursor: pointer;" data-open="lucopizza-html" onclick="volverlucopizza();" alt="">
           </div>
        </div>
           <!-- FIN INPUTS LUCO PIZZA  -->
 
-
+          <br>
+          <br><br><br><br><br>
           
 
 
@@ -229,35 +277,46 @@
        <div id="inputs-pollobbq" hidden>
         <div style="box-shadow: 0px -5px 57px 7px rgba(255, 123, 0, 0.523); display: grid; place-items: center; border: #ff8000 solid 4px; border-bottom: 0px; background-color: #00000015; width: 98%; height: 150px; z-index: 1; position: relative; margin: auto;">
           <img src="/Pizzas/pollobbq.png" alt="" readonly style="width: 100px; position: absolute; margin-left: -70%; margin-top: 50px;">
+          <label for="pollobbqpizza"></label>
           <input type="text"  id="input-pollobbq-pizza" readonly style="background-color: transparent; border: 0px; text-align: start; padding: 0;  font-size: 240%; min-width: 20%; width: 300px; max-width: 80%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-left: 5px; color: black;"> <br>
-           <input  type="text" id="input-pollobbq-masa" readonly style="background-color: transparent; border: 0px; color: #ff6a00; text-align: center; padding: 0;  font-size: 215%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 220px; ">
-          <input type="text" id="input-pollobbq-tamaño" readonly style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 290%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
-          <input type="text"  id="input-pollobbq-cantidad" class="numpizzas" value="0" readonly style="background-color: transparent; border: 0px;  width: 40px; font-size: 480%; font-family: Impact; text-align: start; height: 55px; position: absolute; margin-left: -90%; margin-top: -90px; color: #ff6a04;">
+          <label for="pollobbqmasa"></label>  
+          <input  type="text" id="input-pollobbq-masa" readonly style="background-color: transparent; border: 0px; color: #ff6a00; text-align: center; padding: 0;  font-size: 215%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 220px; ">
+          <label for="pollobbqtamaño"></label>
+           <input type="text" id="input-pollobbq-tamaño" readonly style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 290%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
+          <label for="pollobbqcantidad"></label>
+          <input type="text"  id="input-pollobbq-cantidad" class="numpizzas"  readonly style="background-color: transparent; border: 0px;  width: 40px; font-size: 480%; font-family: Impact; text-align: start; height: 55px; position: absolute; margin-left: -90%; margin-top: -90px; color: #ff6a04;">
          
            
           <input type="text"  id="input-pollobbq-precio" readonly style="background-color: transparent; border: 0px; padding-left: 5px; color: #ff6a00; font-size: 160%; font-family: Arial, Helvetica, sans-serif; position: fixed;  max-width: 85px; position: absolute; margin-left: -75%; margin-top: 110px; background-color: #ff5500; color: rgb(255, 255, 255);">
-            <input type="text" placeholder="Nota:" id="input-pollobbq-instrucciones"  style="z-index: 1065700 !important; background-color: #e2e2e2 !important; border: 0px; padding-left: 5px; color: #ff6a00; background-color: #00000015; font-size: 160%; font-family: Arial, Helvetica, sans-serif; position: relative;  width: 102%; height: auto; padding-top: 5px; border-top: 0px; border-bottom: #ff6a04 solid 5px; border-left: #ff8000  solid 4px ; border-right: #ff8000 solid 4px; margin-top: 13px; ">
+          <label for="instruccionespollobbq"></label> 
+          <input type="text" placeholder="Nota:" id="input-pollobbq-instrucciones"  style="z-index: 1065700 !important; background-color: #e2e2e2 !important; border: 0px; padding-left: 5px; color: #ff6a00; background-color: #00000015; font-size: 160%; font-family: Arial, Helvetica, sans-serif; position: relative;  width: 102%; height: auto; padding-top: 5px; border-top: 0px; border-bottom: #ff6a04 solid 5px; border-left: #ff8000  solid 4px ; border-right: #ff8000 solid 4px; margin-top: 13px; ">
                    <button type="button" style="background: rgb(255, 0, 0); color: #fff; margin-top: -180px; margin-left: 92%; position: absolute; width: 40px; height: 35px; border: #ff8000 solid 4px; border-bottom: 0px;" onclick="borrarpedidopollobbq();">✖</button>
                    <img src="https://cdn-icons-png.flaticon.com/512/4226/4226577.png" style="color: #fff; margin-top: -110px; margin-left: 92%; position: absolute; width: 40px; height: 40px; border-bottom: #ff8000; cursor: pointer;" data-open="pollobbq-html" onclick="volverpollobbq();" alt="">
           </div>
        </div>
           <!-- FIN INPUTS POLLO BBQ  -->
 
-
+          <br>
+          <br><br><br><br><br>
           
 
        <!-- INICIO INPUTS CHILLIAN  -->
        <div id="inputs-chillian" hidden>
         <div style="box-shadow: 0px -5px 57px 7px rgba(255, 123, 0, 0.523); display: grid; place-items: center; border: #ff8000 solid 4px; border-bottom: 0px; background-color: #00000015; width: 98%; height: 150px; z-index: 1; position: relative; margin: auto;">
           <img src="/Pizzas/chillian.png" alt="" readonly style="width: 100px; position: absolute; margin-left: -70%; margin-top: 50px;">
+          <label for="chillianpizza"></label>
           <input type="text"  id="input-chillian-pizza" readonly style="background-color: transparent; border: 0px; text-align: start; padding: 0;  font-size: 240%; min-width: 20%; width: 300px; max-width: 80%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-left: 5px; color: black;"> <br>
-           <input  type="text" id="input-chillian-masa" readonly style="background-color: transparent; border: 0px; color: #ff6a00; text-align: center; padding: 0;  font-size: 215%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 220px; ">
-          <input type="text" id="input-chillian-tamaño" readonly style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 290%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
-          <input type="text"  id="input-chillian-cantidad" class="numpizzas" value="0" readonly style="background-color: transparent; border: 0px;  width: 40px; font-size: 480%; font-family: Impact; text-align: start; height: 55px; position: absolute; margin-left: -90%; margin-top: -90px; color: #ff6a04;">
+          <label for="chillianmasa"></label> 
+          <input  type="text" id="input-chillian-masa" readonly style="background-color: transparent; border: 0px; color: #ff6a00; text-align: center; padding: 0;  font-size: 215%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 220px; ">
+          <label for="chilliantamaño"></label>
+           <input type="text" id="input-chillian-tamaño" readonly style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 290%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
+          <label for="chilliancantidad"></label>
+          <input type="text"  id="input-chillian-cantidad" class="numpizzas"  readonly style="background-color: transparent; border: 0px;  width: 40px; font-size: 480%; font-family: Impact; text-align: start; height: 55px; position: absolute; margin-left: -90%; margin-top: -90px; color: #ff6a04;">
          
            
           <input type="text"  id="input-chillian-precio" readonly style="background-color: transparent; border: 0px; padding-left: 5px; color: #ff6a00; font-size: 160%; font-family: Arial, Helvetica, sans-serif; position: fixed;  max-width: 85px; position: absolute; margin-left: -75%; margin-top: 110px; background-color: #ff5500; color: rgb(255, 255, 255);">
-            <input type="text" placeholder="Nota:" id="input-chillian-instrucciones"  style="z-index: 1065700 !important; background-color: #e2e2e2 !important; border: 0px; padding-left: 5px; color: #ff6a00; background-color: #00000015; font-size: 160%; font-family: Arial, Helvetica, sans-serif; position: relative;  width: 102%; height: auto; padding-top: 5px; border-top: 0px; border-bottom: #ff6a04 solid 5px; border-left: #ff8000  solid 4px ; border-right: #ff8000 solid 4px; margin-top: 13px; ">
+          <label for="instruccioneschillian"></label> 
+          <input type="text" placeholder="Nota:" id="input-chillian-instrucciones"  style="z-index: 1065700 !important; background-color: #e2e2e2 !important; border: 0px; padding-left: 5px; color: #ff6a00; background-color: #00000015; font-size: 160%; font-family: Arial, Helvetica, sans-serif; position: relative;  width: 102%; height: auto; padding-top: 5px; border-top: 0px; border-bottom: #ff6a04 solid 5px; border-left: #ff8000  solid 4px ; border-right: #ff8000 solid 4px; margin-top: 13px; ">
                    <button type="button" style="background: rgb(255, 0, 0); color: #fff; margin-top: -180px; margin-left: 92%; position: absolute; width: 40px; height: 35px; border: #ff8000 solid 4px; border-bottom: 0px;" onclick="borrarpedidochillian();">✖</button>
                    <img src="https://cdn-icons-png.flaticon.com/512/4226/4226577.png" style="color: #fff; margin-top: -110px; margin-left: 92%; position: absolute; width: 40px; height: 40px; border-bottom: #ff8000; cursor: pointer;" data-open="chillian-html" onclick="volverchillian();" alt="">
           </div>
@@ -266,11 +325,39 @@
 
 
 
+
+
+          <!-- INICIO INPUTS CHEESEBURGER  -->
+
+
+
+
+<div id="inputs-cheeseburger" hidden>
+  <div style="box-shadow: 0px -5px 57px 7px rgba(255, 123, 0, 0.523); display: grid; place-items: center; border: #ff8000 solid 4px; border-bottom: 0px; background-color: #00000015; width: 98%; height: 150px; z-index: 1; position: relative; margin: auto;">
+    <img src="/Pizzas/cheeseburger.png" alt="" readonly style="width: 100px; position: absolute; margin-left: -70%; margin-top: 50px;">
+    <label for="cheeseburgerpizza"></label>
+    <input type="text"  id="input-cheeseburger-pizza" readonly style="background-color: transparent; border: 0px; text-align: start; padding: 0;  font-size: 240%; min-width: 20%; width: 300px; max-width: 80%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-left: 5px; color: black;"> <br>
+    <label for="cheeseburgermasa"></label> 
+    <input  type="text" id="input-cheeseburger-masa" readonly style="background-color: transparent; border: 0px; color: #ff6a00; text-align: center; padding: 0;  font-size: 215%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 220px; ">
+    <label for="cheeseburgertamaño"></label>
+     <input type="text" id="input-cheeseburger-tamaño" readonly style="background-color: transparent; border: 0px; color: #ff9800; text-align: center; padding: auto;  font-size: 290%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; position: relative; margin-right: -23%; max-width: 200px;">
+    <label for="cheeseburgercantidad"></label>
+    <input type="text"  id="input-cheeseburger-cantidad" class="numpizzas"  readonly style="background-color: transparent; border: 0px;  width: 40px; font-size: 480%; font-family: Impact; text-align: start; height: 55px; position: absolute; margin-left: -90%; margin-top: -90px; color: #ff6a04;">
+   
+     
+    <input type="text"  id="input-cheeseburger-precio" readonly style="background-color: transparent; border: 0px; padding-left: 5px; color: #ff6a00; font-size: 160%; font-family: Arial, Helvetica, sans-serif; position: fixed;  max-width: 85px; position: absolute; margin-left: -75%; margin-top: 110px; background-color: #ff5500; color: rgb(255, 255, 255);">
+    <label for="instruccionescheeseburger"></label>  
+    <input type="text" placeholder="Nota:" id="input-cheeseburger-instrucciones"  style="z-index: 1065700 !important; background-color: #e2e2e2 !important; border: 0px; padding-left: 5px; color: #ff6a00; background-color: #00000015; font-size: 160%; font-family: Arial, Helvetica, sans-serif; position: relative;  width: 102%; height: auto; padding-top: 5px; border-top: 0px; border-bottom: #ff6a04 solid 5px; border-left: #ff8000  solid 4px ; border-right: #ff8000 solid 4px; margin-top: 13px; ">
+             <button type="button" style="background: rgb(255, 0, 0); color: #fff; margin-top: -180px; margin-left: 92%; position: absolute; width: 40px; height: 35px; border: #ff8000 solid 4px; border-bottom: 0px;" onclick="borrarpedidocheeseburger();">✖</button>
+             <img src="https://cdn-icons-png.flaticon.com/512/4226/4226577.png" style="color: #fff; margin-top: -110px; margin-left: 92%; position: absolute; width: 40px; height: 40px; border-bottom: #ff8000; cursor: pointer;" data-open="cheeseburger-html" onclick="volvercheeseburger();" alt="">
+    </div>
+ </div>
+    <!-- FIN INPUTS CHEESEBURGER  -->
           </div>
         </div>
         </div>
 
->
+
 
 
 
@@ -341,10 +428,9 @@
                             type="number"
                            class="formulario__input"
                            placeholder="Indica cuál es Teléfono"
-                           oninput="securePhoneNumber(this)"
                          />
                      
-                         <p style="position: absolute; z-index: inherit; margin-top: -46.5px; font-size: 150%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; user-select: none;" aria-readonly="true">+56</p>
+                         <p style="position: absolute; z-index: inherit; margin-top: -46.5px; font-size: 150%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; user-select: none;" aria-readonly="true" aria-disabled="true">+56</p>
                          
              <br>
              <br><br> 
@@ -386,7 +472,14 @@
                              type="number"
                              placeholder="$" class="formulario__input"  style="color: rgb(1, 128, 1) !; padding: 0; width: 60%; font-size: 22px; text-align: center; margin: auto; margin-bottom: 30px; font-family: Arial, Helvetica, sans-serif;" />
                              
-                             <button type="button" class="button" style="z-index: 5; position: relative; text-align: center; padding-left: 25px; padding-right: 25px; padding-top: 12px !important; padding-bottom: 12px !important; z-index: 4; position: relative; text-align: center; padding: 10px; padding-top: 10px; padding-bottom: 10px; margin: auto !important; font-size: 125%; margin-right: 200px !important; margin-top: 50px !important; padding: 10px; width: 80%; margin: auto !important;" data-close="">
+                             <label for="cancelocon"></label>
+                             <input type="text" id="cancelocon" hidden>
+
+
+
+     
+
+                             <button id="listo" onclick="canceloconx()" type="button" class="button" style="z-index: 5; position: relative; text-align: center; padding-left: 25px; padding-right: 25px; padding-top: 12px !important; padding-bottom: 12px !important; z-index: 4; position: relative; text-align: center; padding: 10px; padding-top: 10px; padding-bottom: 10px; margin: auto !important; font-size: 125%; margin-right: 200px !important; margin-top: 50px !important; padding: 10px; width: 80%; margin: auto !important;" data-close="">
                                  Listo
                              </button>
              <br>
@@ -394,7 +487,7 @@
                     <br>    
              <br>
              
-                             <button type="button" class="button-select" style="z-index: 4; position: relative; text-align: center; padding: 10px; padding-top: 10px; padding-bottom: 10px; margin: auto !important; font-size: 125%;" data-close="" onclick="borrarformadepago();">
+                             <button type="button" class="button-select" style="z-index: 4; position: relative; text-align: center; padding: 10px; padding-top: 10px; padding-bottom: 10px; margin: auto !important; font-size: 125%;" data-close="" onclick="borrarformadepago();nocanceloconx()">
                                  Cambiar Forma de pago
                              </button>
                              
@@ -426,6 +519,7 @@
                     class="formulario__input"
              
                   />   <br><br><br><br><br><br>
+                  <label for="formadepago"></label>
                   <input readonly readonly style="font-family: 'Franklin Gothic Medium';"
                   id="formadepago"
                   type="text"
@@ -451,7 +545,6 @@
 <br><br><br><br><br><br><br><br>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 
-<input type="text" id="inputTotal" value="0" class="solo-numero" style="width:18% !important; margin-right:-2px; text-align:right" />
  </div>
  
 </div>
@@ -517,7 +610,7 @@
 <!-- ITALIANA -->
 
 
-<a data-open="ventana-italiana" href="#anchor-pedir-italiana">
+<a data-open="ventana-italiana" href="##anchor-pedir-italiana">
   <div style="border: #ff8900 solid; box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3); width: 95%; margin: auto; height: 130px; margin-top: 20px;">
       <img style="border-right: 2px solid rgb(255, 136, 0); height: 120px; width: 120px;" class="img-pizza" src="/Pizzas/italiana.png" alt="">
   
@@ -559,9 +652,9 @@
  style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -50px;"
       />
         
-      <a id="anchor-pedir-italiana"></a>
+      <a id="#anchor-pedir-italiana"></a>
        
-        <footer><button type="button" class="buttons" style="width: 95%; height: 70px !important;" data-close="" data-open="italiana-html" onclick="italianapizza();">Pedir</button>
+        <footer><button type="button" class="buttons" style="width: 95%; height: 70px !important;" data-close="" data-open="italiana-html" onclick="italianapizza();" href="##anchor-agregar-italiana">Pedir</button>
          <br><br>
           <button type="button" class="button-select" style="width: auto; height: 70px !important;" data-close="">CERRAR</button>
 
@@ -663,9 +756,9 @@
 
 
                      
-                    <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1italianafamiliares" data-close="" onclick="italianafamiliares();">1</button> 
+                    <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1italianafamiliares" data-close="" onclick="italianafamiliares();italianabuttonoff();">1</button> 
 
-                    <button type="button" class="button-select" style="width: 90%;" value="$8.995" id="1italianafamiliaresx" data-close="" onclick="italianafamiliaresx();" hidden >1</button>
+                    <button type="button" class="button-select" style="width: 90%;" value="$8.995" id="1italianafamiliaresuno" data-close="" onclick="italianafamiliaresuno();" hidden >1</button>
                     <br>
                     <br>
                           <button type="button" class="button-select" style="width: 90%;" value="$17.990" id="2italianafamiliares" data-close="" onclick="italianafamiliaresdos();" data-open="agregarbebidapromo">2</button>
@@ -714,18 +807,18 @@
           
                   <section class="modal-content" >
     
-                    <button type="button" class="button-select" style="width: 90%;" value="$7.495" id="1italianamedianas" data-close="" onclick="italianamedianas();">1</button>
+                    <button type="button" class="button-select" style="width: 90%;" value="$7.495" id="1italianamedianas" data-close="" onclick="italianamedianas();italianabuttonoff();">1</button>
 
-                     <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1italianamedianasx" data-close="" onclick="italianamedianasx();" hidden>1</button>
+                     <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1italianamedianasuno" data-close="" onclick="italianamedianasuno();" hidden>1</button>
                <br>
                <br>
-                     <button type="button" class="button-select" style="width: 90%;" value="$17.990" id="2italiananamedianas"data-close="" onclick="italianamedianasdos();">2</button>
+                     <button type="button" class="button-select" style="width: 90%;" value="$17.990" id="2italiananamedianas" data-close="" onclick="italianamedianasdos();">2</button>
                      <br>
                      <br>
-                     <button type="button" class="button-select" style="width: 90%;" value="$28.980" id="3italiananamedianas"data-close="" onclick="italianamedianastres();">3</button>
+                     <button type="button" class="button-select" style="width: 90%;" value="$28.980" id="3italiananamedianas" data-close="" onclick="italianamedianastres();">3</button>
                      <br>
                      <br>
-                     <button type="button" class="button-select" style="width: 90%;" value="$35.980" id="4italiananamedianas"data-close="" onclick="italianamedianascuatro();">4</button>
+                     <button type="button" class="button-select" style="width: 90%;" value="$35.980" id="4italiananamedianas" data-close="" onclick="italianamedianascuatro();">4</button>
        <br><br>
        <button href="whatsapp.com" type="button" class="button-select" style="width: 90%; font-size: 230% !important; padding: 3px  !important;" value="+" data-close="" data-open="pedidoconanticipacion">+</button>
        
@@ -782,9 +875,9 @@
           
   
           
-          <br><br>
+          <br><br><a id="#anchor-agregar-italiana"></a>
           <footer>
-              <button type="button" class="buttons" style="width: 100%; height: 70px !important;" id="finalizarpedido-italiana" data-close="" data-open="darkground" onclick="agregaralpedidoitaliana();" >Agregar al Pedido <img src="/PalmasPizzaIMG/carrito-img-white.png" alt="" style="width: 50px; position: absolute; margin-top: -15px;"></button>
+              <button type="button" class="buttons" style="width: 100%; height: 70px !important;" id="finalizarpedido-italiana" data-close="" data-open="darkground" onclick="sumartodo();agregaralpedidoitaliana();" >Agregar al Pedido <img src="/PalmasPizzaIMG/carrito-img-white.png" alt="" style="width: 50px; position: absolute; margin-top: -15px;"></button>
 
               
 
@@ -922,7 +1015,7 @@
 <!-- HAWAIANA -->
 
 
-<a data-open="ventana-hawaiana" href="#anchor-pedir-hawaiana">
+<a data-open="ventana-hawaiana" href="##anchor-pedir-hawaiana">
 <div style="border: #ff8900 solid; box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3); width: 95%; margin: auto; height: 120px; margin-top: 20px;">
     <img style="border: 2px solid rgb(255, 136, 0); height: 115px; width: 120px; border-bottom: 0px;" class="img-pizza" src="/Pizzas/hawaiana.png" alt="">
 
@@ -964,9 +1057,9 @@ Piña, Jamón</p>
 style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -50px;"
     />
       
-    <a id="anchor-pedir-hawaiana"></a>
+    <a id="#anchor-pedir-hawaiana"></a>
      
-      <footer><button type="button" class="buttons" style="width: 95%; height: 70px !important;" data-close="" data-open="hawaiana-html" onclick="hawaianapizza();">Pedir</button>
+      <footer><button type="button" class="buttons" style="width: 95%; height: 70px !important;" data-close="" data-open="hawaiana-html" onclick="hawaianapizza();" href="##anchor-agregar-hawaiana">Pedir</button>
        <br><br>
         <button type="button" class="button-select" style="width: auto; height: 70px !important;" data-close="">CERRAR</button>
 
@@ -1010,7 +1103,7 @@ style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -
         
 
         
-        <button type="button" class="tamaño button-select" id="medianahawaiana" onclick="cambiarcolormedianahawaiana();" data-open="cantidad-hawaiana-mediana-button" ondblclick="hawaianatamañomediana();" >Mediana</button>
+        <button type="button" class="tamaño button-select" id="medianahawaiana" onclick="cambiarcolormedianahawaiana();" data-open="cantidad-hawaiana-mediana-button" ondblclick="hawaianatamañomediana();">Mediana</button>
         
 
 
@@ -1068,9 +1161,9 @@ style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -
 
 
          
-        <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1hawaianafamiliares" data-close="" onclick="hawaianafamiliares();">1</button> 
+        <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1hawaianafamiliares" data-close="" onclick="hawaianafamiliares();hawaianabuttonoff();">1</button> 
 
-        <button type="button" class="button-select" style="width: 90%;" value="$8.995" id="1hawaianafamiliaresx" data-close="" onclick="hawaianafamiliaresx();" hidden >1</button>
+        <button type="button" class="button-select" style="width: 90%;" value="$8.995" id="1hawaianafamiliaresuno" data-close="" onclick="hawaianafamiliaresuno();" hidden >1</button>
         <br>
         <br>
               <button type="button" class="button-select" style="width: 90%;" value="$17.990" id="2hawaianafamiliares" data-close="" onclick="hawaianafamiliaresdos();" data-open="agregarbebidapromo">2</button>
@@ -1119,9 +1212,9 @@ style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -
 
       <section class="modal-content" >
 
-        <button type="button" class="button-select" style="width: 90%;" value="$7.495" id="1hawaianamedianas" data-close="" onclick="hawaianamedianas();">1</button>
+        <button type="button" class="button-select" style="width: 90%;" value="$7.495" id="1hawaianamedianas" data-close="" onclick="hawaianamedianas();hawaianabuttonoff();">1</button>
 
-         <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1hawaianamedianasx" data-close="" onclick="hawaianamedianasx();" hidden>1</button>
+         <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1hawaianamedianasuno" data-close="" onclick="hawaianamedianasuno();" hidden>1</button>
    <br>
    <br>
          <button type="button" class="button-select" style="width: 90%;" value="$17.990" id="2hawaiananamedianas"data-close="" onclick="hawaianamedianasdos();">2</button>
@@ -1165,7 +1258,7 @@ style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -
 
 
       <h2 style="margin-left: 4%; font-size: 200%; ">Masa:</h2>
-      <p style="margin-left: 4%; font-size: 140%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(93, 93, 93);">Selecciona la <span style="color: #ff5500;">Masa</span> de tu Pizza</p>
+      <p style="margin-left: 4%; font-size: 140%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: #5d5d5d;">Selecciona la <span style="color: #ff5500;">Masa</span> de tu Pizza</p>
       <button type="button" class="tamaño button-select" id="masatradicionalhawaiana" onclick="cambiarcolormasatradicionalhawaiana();">Tradicional</button>
       <button type="button" class="tamaño button-select" id="masadelgadahawaiana" onclick="cambiarcolormasadelgadahawaiana();">Delgada</button>
       
@@ -1177,7 +1270,7 @@ style="border-color: rgb(94, 94, 94) !important;"
     />
         
 
-        <label class="formulario__label" for="instrucciones" style="margin-left: 2%;">Instrucciones Especiales  <span style="color: rgb(88, 88, 88);">(Opcional) </span>:</label>
+        <label class="formulario__label" for="instrucciones" style="margin-left: 2%;">Instrucciones Especiales  <span style="color: #585858;">(Opcional) </span>:</label>
         <input
         id="instrucciones-hawaiana" 
         class="instrucciones__input" 
@@ -1187,12 +1280,12 @@ style="border-color: rgb(94, 94, 94) !important;"
         
 
         
-        <br><br>
-        <button type="button" class="buttons" style="width: 100%; height: 70px !important;" id="finalizarpedido-hawaiana" data-close="" onclick="agregaralpedidohawaiana();" >Agregar al Pedido<img src="/PalmasPizzaIMG/carrito-img-white.png" alt="" style="width: 50px; position: absolute; margin-top: -15px;"></button>
+        <br><br><a id="#anchor-agregar-hawaiana"></a>
+        <button type="button" class="buttons" style="width: 100%; height: 70px !important;" id="finalizarpedido-hawaiana" data-close="" onclick="sumartodo();agregaralpedidohawaiana();" >Agregar al Pedido<img src="/PalmasPizzaIMG/carrito-img-white.png" alt="" style="width: 50px; position: absolute; margin-top: -15px;"></button>
 
 
             </form>
-           <script src="/Index/hawaiana.js"></script>
+           <script src="/Javascript/hawaiana.js"></script>
   </div>
 </div>
 </div>
@@ -1249,7 +1342,7 @@ style="border-color: rgb(94, 94, 94) !important;"
 <!-- NAPOLITANA -->
 
 
-<a data-open="ventana-napolitana" href="#anchor-pedir-napolitana">
+<a data-open="ventana-napolitana" href="##anchor-pedir-napolitana">
 <div style="border: #ff8900 solid; box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3); width: 95%; margin: auto; height: 120px; margin-top: 20px;">
     <img style="border: 2px solid rgb(255, 136, 0); height: 115px; width: 120px; border-bottom: 0px;" class="img-pizza" src="/Pizzas/napolitana.png" alt="">
 
@@ -1291,9 +1384,9 @@ Tomate </p>
 style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -50px;"
     />
       
-    <a id="anchor-pedir-napolitana"></a>
+    <a id="#anchor-pedir-napolitana"></a>
      
-      <footer><button type="button" class="buttons" style="width: 95%; height: 70px !important;" data-close="" data-open="napolitana-html" onclick="napolitanapizza();">Pedir</button>
+      <footer><button type="button" class="buttons" style="width: 95%; height: 70px !important;" data-close="" data-open="napolitana-html" onclick="napolitanapizza();" href="##anchor-agregar-napolitana">Pedir</button>
        <br><br>
         <button type="button" class="button-select" style="width: auto; height: 70px !important;" data-close="">CERRAR</button>
 
@@ -1395,9 +1488,9 @@ style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -
 
 
          
-        <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1napolitanafamiliares" data-close="" onclick="napolitanafamiliares();">1</button> 
+        <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1napolitanafamiliares" data-close="" onclick="napolitanafamiliares();napolitanabuttonoff();">1</button> 
 
-        <button type="button" class="button-select" style="width: 90%;" value="$8.995" id="1napolitanafamiliaresx" data-close="" onclick="napolitanafamiliaresx();" hidden >1</button>
+        <button type="button" class="button-select" style="width: 90%;" value="$8.995" id="1napolitanafamiliaresuno" data-close="" onclick="napolitanafamiliaresuno();" hidden >1</button>
         <br>
         <br>
               <button type="button" class="button-select" style="width: 90%;" value="$17.990" id="2napolitanafamiliares" data-close="" onclick="napolitanafamiliaresdos();" data-open="agregarbebidapromo">2</button>
@@ -1446,9 +1539,9 @@ style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -
 
       <section class="modal-content" >
 
-        <button type="button" class="button-select" style="width: 90%;" value="$7.495" id="1napolitanamedianas" data-close="" onclick="napolitanamedianas();">1</button>
+        <button type="button" class="button-select" style="width: 90%;" value="$7.495" id="1napolitanamedianas" data-close="" onclick="napolitanamedianas();napolitanabuttonoff();">1</button>
 
-         <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1napolitanamedianasx" data-close="" onclick="napolitanamedianasx();" hidden>1</button>
+         <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1napolitanamedianasuno" data-close="" onclick="napolitanamedianasuno();" hidden>1</button>
    <br>
    <br>
          <button type="button" class="button-select" style="width: 90%;" value="$17.990" id="2napolitananamedianas"data-close="" onclick="napolitanamedianasdos();">2</button>
@@ -1512,14 +1605,14 @@ style="border-color: rgb(94, 94, 94) !important;"
         
         
 
-        
+        <a id="#anchor-agregar-napolitana"></a>
         <br><br>
-        <button type="button" class="buttons" style="width: 100%; height: 70px !important;" id="finalizarpedido-napolitana" data-close="" onclick="agregaralpedidonapolitana();" >Agregar al Pedido<img src="/PalmasPizzaIMG/carrito-img-white.png" alt="" style="width: 50px; position: absolute; margin-top: -15px;"></button>
+        <button type="button" class="buttons" style="width: 100%; height: 70px !important;" id="finalizarpedido-napolitana" data-close="" onclick="sumartodo();agregaralpedidonapolitana();" >Agregar al Pedido<img src="/PalmasPizzaIMG/carrito-img-white.png" alt="" style="width: 50px; position: absolute; margin-top: -15px;"></button>
 
 
 
             </form>
-           <script src="/Index/napolitana.js"></script>
+           <script src="/Javascript/napolitana.js"></script>
   </div>
 </div>
 </div>
@@ -1542,7 +1635,7 @@ style="border-color: rgb(94, 94, 94) !important;"
 <!-- SUPER PEPERONI -->
 
 
-<a data-open="ventana-superpepperoni" href="#anchor-pedir-superpepperoni">
+<a data-open="ventana-superpepperoni" href="##anchor-pedir-superpepperoni">
 <div style="border: #ff8900 solid; box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3); width: 95%; margin: auto; height: 120px; margin-top: 20px;">
     <img style="border: 2px solid rgb(255, 136, 0); height: 115px; width: 120px; border-bottom: 0px;" class="img-pizza" src="/Pizzas/superpepperoni.png" alt="">
 
@@ -1584,9 +1677,9 @@ Tomate </p>
 style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -50px;"
     />
       
-    <a id="anchor-pedir-superpepperoni"></a>
+    <a id="#anchor-pedir-superpepperoni"></a>
      
-      <footer><button type="button" class="buttons" style="width: 95%; height: 70px !important;" data-close="" data-open="superpepperoni-html" onclick="superpepperonipizza();">Pedir</button>
+      <footer><button type="button" class="buttons" style="width: 95%; height: 70px !important;" data-close="" data-open="superpepperoni-html" onclick="superpepperonipizza();" href="##anchor-agregar-superpepperoni">Pedir</button>
        <br><br>
         <button type="button" class="button-select" style="width: auto; height: 70px !important;" data-close="">CERRAR</button>
 
@@ -1688,9 +1781,9 @@ style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -
 
 
          
-        <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1superpepperonifamiliares" data-close="" onclick="superpepperonifamiliares();">1</button> 
+        <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1superpepperonifamiliares" data-close="" onclick="superpepperonifamiliares();superpepperonibuttonoff();">1</button> 
 
-        <button type="button" class="button-select" style="width: 90%;" value="$8.995" id="1superpepperonifamiliaresx" data-close="" onclick="superpepperonifamiliaresx();" hidden >1</button>
+        <button type="button" class="button-select" style="width: 90%;" value="$8.995" id="1superpepperonifamiliaresuno" data-close="" onclick="superpepperonifamiliaresuno();" hidden >1</button>
         <br>
         <br>
               <button type="button" class="button-select" style="width: 90%;" value="$17.990" id="2superpepperonifamiliares" data-close="" onclick="superpepperonifamiliaresdos();" data-open="agregarbebidapromo">2</button>
@@ -1739,9 +1832,9 @@ style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -
 
       <section class="modal-content" >
 
-        <button type="button" class="button-select" style="width: 90%;" value="$7.495" id="1superpepperonimedianas" data-close="" onclick="superpepperonimedianas();">1</button>
+        <button type="button" class="button-select" style="width: 90%;" value="$7.495" id="1superpepperonimedianas" data-close="" onclick="superpepperonimedianas();superpepperonibuttonoff();">1</button>
 
-         <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1superpepperonimedianasx" data-close="" onclick="superpepperonimedianasx();" hidden>1</button>
+         <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1superpepperonimedianasuno" data-close="" onclick="superpepperonimedianasuno();" hidden>1</button>
    <br>
    <br>
          <button type="button" class="button-select" style="width: 90%;" value="$17.990" id="2superpepperoninamedianas"data-close="" onclick="superpepperonimedianasdos();">2</button>
@@ -1807,12 +1900,12 @@ style="border-color: rgb(94, 94, 94) !important;"
         
 
         
-        <br><br>
-        <button type="button" class="buttons" style="width: 100%; height: 70px !important;" id="finalizarpedido-superpepperoni" data-close="" onclick="agregaralpedidosuperpepperoni();" >Agregar al Pedido<img src="/PalmasPizzaIMG/carrito-img-white.png" alt="" style="width: 50px; position: absolute; margin-top: -15px;"></button>
+        <br><br><a id="#anchor-agregar-superpepperoni"></a>
+        <button type="button" class="buttons" style="width: 100%; height: 70px !important;" id="finalizarpedido-superpepperoni" data-close="" onclick="sumartodo();agregaralpedidosuperpepperoni();" >Agregar al Pedido<img src="/PalmasPizzaIMG/carrito-img-white.png" alt="" style="width: 50px; position: absolute; margin-top: -15px;"></button>
 
 
             </form>
-           <script src="/Index/superpepperoni.js"></script>
+           <script src="/Javascript/superpepperoni.js"></script>
   </div>
 </div>
 </div>
@@ -1827,7 +1920,7 @@ style="border-color: rgb(94, 94, 94) !important;"
 <!-- VEGETARIANA -->
 
 
-<a data-open="ventana-vegetariana" href="#anchor-pedir-vegetariana">
+<a data-open="ventana-vegetariana" href="##anchor-pedir-vegetariana">
   <div style="border: #ff8900 solid; box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3); width: 95%; margin: auto; height: 120px; margin-top: 20px;">
       <img style="border: 2px solid rgb(255, 136, 0); height: 115px; width: 120px; border-bottom: 0px;" class="img-pizza" src="/Pizzas/vegetariana.png" alt="">
   
@@ -1869,9 +1962,9 @@ style="border-color: rgb(94, 94, 94) !important;"
   style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -50px;"
       />
         
-      <a id="anchor-pedir-vegetariana"></a>
+      <a id="#anchor-pedir-vegetariana"></a>
        
-        <footer><button type="button" class="buttons" style="width: 95%; height: 70px !important;" data-close="" data-open="vegetariana-html" onclick="vegetarianapizza();">Pedir</button>
+        <footer><button type="button" class="buttons" style="width: 95%; height: 70px !important;" data-close="" data-open="vegetariana-html" onclick="vegetarianapizza();" href="##anchor-agregar-vegetariana">Pedir</button>
          <br><br>
           <button type="button" class="button-select" style="width: auto; height: 70px !important;" data-close="">CERRAR</button>
   
@@ -1973,9 +2066,9 @@ style="border-color: rgb(94, 94, 94) !important;"
   
   
            
-          <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1vegetarianafamiliares" data-close="" onclick="vegetarianafamiliares();">1</button> 
+          <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1vegetarianafamiliares" data-close="" onclick="vegetarianafamiliares();vegetarianabuttonoff();">1</button> 
   
-          <button type="button" class="button-select" style="width: 90%;" value="$8.995" id="1vegetarianafamiliaresx" data-close="" onclick="vegetarianafamiliaresx();" hidden >1</button>
+          <button type="button" class="button-select" style="width: 90%;" value="$8.995" id="1vegetarianafamiliaresuno" data-close="" onclick="vegetarianafamiliaresuno();" hidden >1</button>
           <br>
           <br>
                 <button type="button" class="button-select" style="width: 90%;" value="$17.990" id="2vegetarianafamiliares" data-close="" onclick="vegetarianafamiliaresdos();" data-open="agregarbebidapromo">2</button>
@@ -2024,9 +2117,9 @@ style="border-color: rgb(94, 94, 94) !important;"
   
         <section class="modal-content" >
   
-          <button type="button" class="button-select" style="width: 90%;" value="$7.495" id="1vegetarianamedianas" data-close="" onclick="vegetarianamedianas();">1</button>
+          <button type="button" class="button-select" style="width: 90%;" value="$7.495" id="1vegetarianamedianas" data-close="" onclick="vegetarianamedianas();vegetarianabuttonoff();">1</button>
   
-           <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1vegetarianamedianasx" data-close="" onclick="vegetarianamedianasx();" hidden>1</button>
+           <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1vegetarianamedianasuno" data-close="" onclick="vegetarianamedianasuno();" hidden>1</button>
      <br>
      <br>
            <button type="button" class="button-select" style="width: 90%;" value="$17.990" id="2vegetariananamedianas"data-close="" onclick="vegetarianamedianasdos();">2</button>
@@ -2092,13 +2185,13 @@ style="border-color: rgb(94, 94, 94) !important;"
           
   
           
-          <br><br>
-          <button type="button" class="buttons" style="width: 100%; height: 70px !important;" id="finalizarpedido-vegetariana" data-close="" onclick="agregaralpedidovegetariana();" >Agregar al Pedido<img src="/PalmasPizzaIMG/carrito-img-white.png" alt="" style="width: 50px; position: absolute; margin-top: -15px;"></button>
+          <br><br><a id="#anchor-agregar-vegetariana"></a>
+          <button type="button" class="buttons" style="width: 100%; height: 70px !important;" id="finalizarpedido-vegetariana" data-close="" onclick="sumartodo();agregaralpedidovegetariana();" >Agregar al Pedido<img src="/PalmasPizzaIMG/carrito-img-white.png" alt="" style="width: 50px; position: absolute; margin-top: -15px;"></button>
 
          
   
               </form>
-             <script src="/Index/vegetariana.js"></script>
+             <script src="/Javascript/vegetariana.js"></script>
     </div>
   </div>
   </div>
@@ -2114,7 +2207,7 @@ style="border-color: rgb(94, 94, 94) !important;"
 <!-- LUCO PIZZA -->
 
 
-<a data-open="ventana-lucopizza" href="#anchor-pedir-lucopizza">
+<a data-open="ventana-lucopizza" href="##anchor-pedir-lucopizza">
 <div style="border: #ff8900 solid; box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3); width: 95%; margin: auto; height: 120px; margin-top: 20px;">
     <img style="border: 2px solid rgb(255, 136, 0); height: 115px; width: 120px; border-bottom: 0px;" class="img-pizza" src="/Pizzas/lucopizza.png" alt="">
 
@@ -2156,9 +2249,9 @@ Tomate </p>
 style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -50px;"
     />
       
-    <a id="anchor-pedir-lucopizza"></a>
+    <a id="#anchor-pedir-lucopizza"></a>
      
-      <footer><button type="button" class="buttons" style="width: 95%; height: 70px !important;" data-close="" data-open="lucopizza-html" onclick="lucopizzapizza();">Pedir</button>
+      <footer><button type="button" class="buttons" style="width: 95%; height: 70px !important;" data-close="" data-open="lucopizza-html" onclick="lucopizzapizza();" href="##anchor-agregar-lucopizza">Pedir</button>
        <br><br>
         <button type="button" class="button-select" style="width: auto; height: 70px !important;" data-close="">CERRAR</button>
 
@@ -2259,9 +2352,9 @@ style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -
 
 
          
-        <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1lucopizzafamiliares" data-close="" onclick="lucopizzafamiliares();">1</button> 
+        <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1lucopizzafamiliares" data-close="" onclick="lucopizzafamiliares();lucopizzabuttonoff();">1</button> 
 
-        <button type="button" class="button-select" style="width: 90%;" value="$8.995" id="1lucopizzafamiliaresx" data-close="" onclick="lucopizzafamiliaresx();" hidden >1</button>
+        <button type="button" class="button-select" style="width: 90%;" value="$8.995" id="1lucopizzafamiliaresuno" data-close="" onclick="lucopizzafamiliaresuno();" hidden >1</button>
         <br>
         <br>
               <button type="button" class="button-select" style="width: 90%;" value="$17.990" id="2lucopizzafamiliares" data-close="" onclick="lucopizzafamiliaresdos();" data-open="agregarbebidapromo">2</button>
@@ -2310,9 +2403,9 @@ style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -
 
       <section class="modal-content" >
 
-        <button type="button" class="button-select" style="width: 90%;" value="$7.495" id="1lucopizzamedianas" data-close="" onclick="lucopizzamedianas();">1</button>
+        <button type="button" class="button-select" style="width: 90%;" value="$7.495" id="1lucopizzamedianas" data-close="" onclick="lucopizzamedianas();lucopizzabuttonoff();">1</button>
 
-         <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1lucopizzamedianasx" data-close="" onclick="lucopizzamedianasx();" hidden>1</button>
+         <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1lucopizzamedianasuno" data-close="" onclick="lucopizzamedianasuno();" hidden>1</button>
    <br>
    <br>
          <button type="button" class="button-select" style="width: 90%;" value="$17.990" id="2lucopizzanamedianas"data-close="" onclick="lucopizzamedianasdos();">2</button>
@@ -2378,12 +2471,12 @@ style="border-color: rgb(94, 94, 94) !important;"
         
 
         
-        <br><br>
-        <button type="button" class="buttons" style="width: 100%; height: 70px !important;" id="finalizarpedido-lucopizza" data-close="" onclick="agregaralpedidolucopizza();" >Agregar al Pedido<img src="/PalmasPizzaIMG/carrito-img-white.png" alt="" style="width: 50px; position: absolute; margin-top: -15px;"></button>
+        <br><br><a id="#anchor-agregar-lucopizza"></a>
+        <button type="button" class="buttons" style="width: 100%; height: 70px !important;" id="finalizarpedido-lucopizza" data-close="" onclick="sumartodo();agregaralpedidolucopizza();" >Agregar al Pedido<img src="/PalmasPizzaIMG/carrito-img-white.png" alt="" style="width: 50px; position: absolute; margin-top: -15px;"></button>
 
 
             </form>
-           <script src="/Index/lucopizza.js"></script>
+           <script src="/Javascript/lucopizza.js"></script>
   </div>
 </div>
 </div>
@@ -2392,10 +2485,294 @@ style="border-color: rgb(94, 94, 94) !important;"
 
 
 
+
+<!-- CHEESEBURGER -->
+
+
+<a data-open="ventana-cheeseburger" href="##anchor-pedir-cheeseburger">
+  <div style="border: #ff8900 solid; box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3); width: 95%; margin: auto; height: 120px; margin-top: 20px;">
+      <img style="border: 2px solid rgb(255, 136, 0); height: 115px; width: 120px; border-bottom: 0px;" class="img-pizza" src="/Pizzas/cheeseburger.png" alt="">
+  
+      
+      <p class="nombre-pizza">CHEESEBURGER</p>
+      <p class="ing-pizza">Salsa, Queso: <br>
+  Tomate </p>
+  
+        
+  
+           </div>
+           
+  </a>
+  
+  
+  
+  
+  
+  <div class="btn-group">
+  <div class="modal cantidad-button" id="ventana-cheeseburger" data-animation="slideInOutLeft" >
+    <div style="height: 90%;" class="modal-dialog" >
+      <head>
+          <h1 class="formulario__titulo" style="font-size: 250%;">Super Pepperoni</h1>
+  
+          
+      </head>
+  
+  
+  
+        <img class="pizza-imagen" src="/Pizzas/cheeseburger.png" alt="">
+        
+        <h2 style="margin-left: 4%; font-size: 220%; ">Ingredientes:</h2>
+        
+        <p style="margin-left: 4%; font-size: 200%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: #ff5500; ">Queso, Champiñón, Aceituna, Pepperoni, Salchicha </p>
+        
+        
+        <input readonly
+        class="formulario__input"
+  style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -50px;"
+      />
+        
+      <a id="#anchor-pedir-cheeseburger"></a>
+       
+        <footer><button type="button" class="buttons" style="width: 95%; height: 70px !important;" data-close="" data-open="cheeseburger-html" onclick="cheeseburgerpizza();" href="##anchor-agregar-cheeseburger">Pedir</button>
+         <br><br>
+          <button type="button" class="button-select" style="width: auto; height: 70px !important;" data-close="">CERRAR</button>
+  
+      </footer>
+        
+    </div>
+  </div>
+  </div>
+  
+  
+  
+  
+  
+  <!-- VENTANA DE PAGINA COMPLETA ITALIANA -->
+  
+  
+  <div class="btn-group">
+  <div class="modal cantidad-button" style="text-align: left;" id="cheeseburger-html" data-animation="slideInOutLeft" >
+    <div style="height: 90%;" class="modal-dialog" >
+      <head style="background: black !important;" >
+        </head>
+       
+        <form action="" class="formulario" style="width: 100% !important; height: 100% !important; margin: 0; margin-top: px !important; padding: 0; max-width: 100%; max-height: 10%; position: static;">
+  
+  <input readonly
+          class="formulario__input"
+   style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -50px;"
+        />
+        
+          
+            <button type="button" id="volver-cheeseburger-html" class="button-select" style="margin: auto; margin-left: 10px; margin-right: 10px; width: auto; height: auto !important; position: relative; float: left; margin-top: 23px; margin-left: 15%;" data-close="" hidden>Volver</button>
+            <br><br><br>
+              <button type="button" class="button-select" style="margin: auto; margin-left: 10px; margin-right: 10px; width: auto; height: auto !important; position: relative;  margin: auto; margin-top: -40px;" data-close="" onclick="borrarpedidocheeseburger();">Borrar y Volver</button>
+        
+          
+          
+          <h2 style="margin-left: 4%; font-size: 200%; ">Tamaño:</h2>
+          <p style="margin-left: 4%; font-size: 140%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(93, 93, 93);">Selecciona el <span style="color: #ff5500;">Tamaño</span> de tu Pizza</p>
+          <button type="button" class="tamaño button-select" id="familiarcheeseburger" onclick="cambiarcolorfamiliarcheeseburger();" data-open="cantidad-cheeseburger-familiar-button" ondblclick="cheeseburgertamañofamiliar();" >Familiar</button>
+  
+          
+  
+          
+          <button type="button" class="tamaño button-select" id="medianacheeseburger" onclick="cambiarcolormedianacheeseburger();" data-open="cantidad-cheeseburger-mediana-button" ondblclick="cheeseburgertamañomediana();" >Mediana</button>
+          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- VENTANA DE NUMERO DE PIZZAS FAMILIARES -->
+    
+  <div class="btn-group"  >
+    <div class="modal cantidad-button" id="cantidad-cheeseburger-familiar-button" data-animation="slideInOutLeft" >
+      <div style="height: auto;" class="modal-dialog" >
+        <head style="background: black !important;" >
+            <h1 class="formulario__titulo">Familiares</h1>
+            <h2 class="" style="font-size: 180% !important;">Número De Pizzas</h2>
+      
+          </head>
+         
+  
+        <section class="modal-content" >
+  
+  
+  
+  
+  
+  
+  
+  
+           
+          <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1cheeseburgerfamiliares" data-close="" onclick="cheeseburgerfamiliares();cheeseburgerbuttonoff();">1</button> 
+  
+          <button type="button" class="button-select" style="width: 90%;" value="$8.995" id="1cheeseburgerfamiliaresuno" data-close="" onclick="cheeseburgerfamiliaresuno();" hidden >1</button>
+          <br>
+          <br>
+                <button type="button" class="button-select" style="width: 90%;" value="$17.990" id="2cheeseburgerfamiliares" data-close="" onclick="cheeseburgerfamiliaresdos();" data-open="agregarbebidapromo">2</button>
+                <br>
+                <br>
+                <button type="button" class="button-select" style="width: 90%;" value="$28.980" id="3cheeseburgerfamiliares" data-close="" onclick="cheeseburgerfamiliarestres();">3</button>
+                <br>
+                <br>
+                <button type="button" class="button-select" style="width: 90%;" value="$35.980" id="4cheeseburgerfamiliares" data-close="" onclick="cheeseburgerfamiliarescuatro();">4</button>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+                
+  <br><br>
+  
+  <button type="button" class="button-select" style="width: 90%; font-size: 250%; padding: 2px;">+</button>
+            <br><br>
+            
+  
+      </div>
+    </div>
+    </div>
+  <!-- FIN DE VENTANA DE NUMERO DE PIZZAS FAMILIARES -->
+  
+  
+  
+  
+  
+  <!-- VENTANA DE NUMERO DE PIZZAS MEDIANAS -->
+  <div class="btn-group"  >
+    <div class="modal cantidad-button" id="cantidad-cheeseburger-mediana-button" data-animation="slideInOutLeft" >
+      <div style="height: auto;" class="modal-dialog" >
+        <head style="background: black !important;" >
+  <h1 class="formulario__titulo">Medianas</h1>
+            <h2 class="" style="font-size: 180% !important;">Número De Pizzas</h2>
+      
+          </head>
+         
+  
+        <section class="modal-content" >
+  
+          <button type="button" class="button-select" style="width: 90%;" value="$7.495" id="1cheeseburgermedianas" data-close="" onclick="cheeseburgermedianas();cheeseburgerbuttonoff();">1</button>
+  
+           <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1cheeseburgermedianasuno" data-close="" onclick="cheeseburgermedianasuno();" hidden>1</button>
+     <br>
+     <br>
+           <button type="button" class="button-select" style="width: 90%;" value="$17.990" id="2cheeseburgernamedianas"data-close="" onclick="cheeseburgermedianasdos();">2</button>
+           <br>
+           <br>
+           <button type="button" class="button-select" style="width: 90%;" value="$28.980" id="3cheeseburgernamedianas"data-close="" onclick="cheeseburgermedianastres();">3</button>
+           <br>
+           <br>
+           <button type="button" class="button-select" style="width: 90%;" value="$35.980" id="4cheeseburgernamedianas"data-close="" onclick="cheeseburgermedianascuatro();">4</button>
+  <br><br>
+  <button href="whatsapp.com" type="button" class="button-select" style="width: 90%; font-size: 230% !important; padding: 3px  !important;" value="+" data-close="" data-open="pedidoconanticipacion">+</button>
+  
+            <br><br>
+            <br><br>
+      </div>
+    </div>
+    </div>
+  
+  
+  <!-- FIN DE VENTANA DE NUMERO DE PIZZAS MEDIANAS -->
+  
+  
+  
+  
+  
+  
+  
+   
+  
+  
+  
+  
+  
+  
+  
+          
+          <input readonly
+          class="formulario__input"
+   style="border-color: rgb(94, 94, 94) !important;"
+        />
+  
+  
+        <h2 style="margin-left: 4%; font-size: 200%; ">Masa:</h2>
+        <p style="margin-left: 4%; font-size: 140%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(93, 93, 93);">Selecciona la <span style="color: #ff5500;">Masa</span> de tu Pizza</p>
+        <button type="button" class="tamaño button-select" id="masatradicionalcheeseburger" onclick="cambiarcolormasatradicionalcheeseburger();">Tradicional</button>
+        <button type="button" class="tamaño button-select" id="masadelgadacheeseburger" onclick="cambiarcolormasadelgadacheeseburger();">Delgada</button>
+        
+  
+        
+        <input readonly
+        class="formulario__input"
+  style="border-color: rgb(94, 94, 94) !important;"
+      />
+          
+  
+          <label class="formulario__label" for="instrucciones" style="margin-left: 2%;">Instrucciones Especiales  <span style="color: rgb(88, 88, 88);">(Opcional) </span>:</label>
+          <input
+          id="instrucciones-cheeseburger" 
+          class="instrucciones__input" 
+          type="text" 
+          placeholder="Añade una Nota para el chef o repartidor">
+          
+          
+  
+          
+          <br><br><a id="#anchor-agregar-cheeseburger"></a>
+          <button type="button" class="buttons" style="width: 100%; height: 70px !important;" id="finalizarpedido-cheeseburger" data-close="" onclick="sumartodo();agregaralpedidocheeseburger();" >Agregar al Pedido<img src="/PalmasPizzaIMG/carrito-img-white.png" alt="" style="width: 50px; position: absolute; margin-top: -15px;"></button>
+  
+  
+              </form>
+             <script src="/Javascript/cheeseburger.js"></script>
+    </div>
+  </div>
+  </div>
+  <!-- FIN DE CHEESEBURGER -->
+  
+
+
+
+
+
 <!-- POLLO BBQ -->
 
 
-<a data-open="ventana-pollobbq" href="#anchor-pedir-pollobbq">
+<a data-open="ventana-pollobbq" href="##anchor-pedir-pollobbq">
 <div style="border: #ff8900 solid; box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3); width: 95%; margin: auto; height: 120px; margin-top: 20px;">
     <img style="border: 2px solid rgb(255, 136, 0); height: 115px; width: 120px; border-bottom: 0px;" class="img-pizza" src="/Pizzas/pollobbq.png" alt="">
 
@@ -2437,9 +2814,9 @@ Tomate </p>
 style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -50px;"
     />
       
-    <a id="anchor-pedir-pollobbq"></a>
+    <a id="#anchor-pedir-pollobbq"></a>
      
-      <footer><button type="button" class="buttons" style="width: 95%; height: 70px !important;" data-close="" data-open="pollobbq-html" onclick="pollobbqpizza();">Pedir</button>
+      <footer><button type="button" class="buttons" style="width: 95%; height: 70px !important;" data-close="" data-open="pollobbq-html" onclick="pollobbqpizza();" href="##anchor-agregar-pollobbq">Pedir</button>
        <br><br>
         <button type="button" class="button-select" style="width: auto; height: 70px !important;" data-close="">CERRAR</button>
 
@@ -2541,9 +2918,9 @@ style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -
 
 
          
-        <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1pollobbqfamiliares" data-close="" onclick="pollobbqfamiliares();">1</button> 
+        <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1pollobbqfamiliares" data-close="" onclick="pollobbqfamiliares();pollobbqbuttonoff();">1</button> 
 
-        <button type="button" class="button-select" style="width: 90%;" value="$8.995" id="1pollobbqfamiliaresx" data-close="" onclick="pollobbqfamiliaresx();" hidden >1</button>
+        <button type="button" class="button-select" style="width: 90%;" value="$8.995" id="1pollobbqfamiliaresuno" data-close="" onclick="pollobbqfamiliaresuno();" hidden >1</button>
         <br>
         <br>
               <button type="button" class="button-select" style="width: 90%;" value="$17.990" id="2pollobbqfamiliares" data-close="" onclick="pollobbqfamiliaresdos();" data-open="agregarbebidapromo">2</button>
@@ -2592,9 +2969,9 @@ style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -
 
       <section class="modal-content" >
 
-        <button type="button" class="button-select" style="width: 90%;" value="$7.495" id="1pollobbqmedianas" data-close="" onclick="pollobbqmedianas();">1</button>
+        <button type="button" class="button-select" style="width: 90%;" value="$7.495" id="1pollobbqmedianas" data-close="" onclick="pollobbqmedianas();pollobbqbuttonoff();">1</button>
 
-         <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1pollobbqmedianasx" data-close="" onclick="pollobbqmedianasx();" hidden>1</button>
+         <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1pollobbqmedianasuno" data-close="" onclick="pollobbqmedianasuno();" hidden>1</button>
    <br>
    <br>
          <button type="button" class="button-select" style="width: 90%;" value="$17.990" id="2pollobbqnamedianas"data-close="" onclick="pollobbqmedianasdos();">2</button>
@@ -2659,13 +3036,13 @@ style="border-color: rgb(94, 94, 94) !important;"
         
 
         
-        <br><br>
-        <button type="button" class="buttons" style="width: 100%; height: 70px !important;" id="finalizarpedido-pollobbq" data-close="" onclick="agregaralpedidopollobbq();" >Agregar al Pedido<img src="/PalmasPizzaIMG/carrito-img-white.png" alt="" style="width: 50px; position: absolute; margin-top: -15px;"></button>
+        <br><br><a id="#anchor-agregar-pollobbq"></a>
+        <button type="button" class="buttons" style="width: 100%; height: 70px !important;" id="finalizarpedido-pollobbq" data-close="" onclick="sumartodo();agregaralpedidopollobbq();" >Agregar al Pedido<img src="/PalmasPizzaIMG/carrito-img-white.png" alt="" style="width: 50px; position: absolute; margin-top: -15px;"></button>
 
        
 
             </form>
-           <script src="/Index/pollobbq.js"></script>
+           <script src="/Javascript/pollobbq.js"></script>
   </div>
 </div>
 </div>
@@ -2677,7 +3054,7 @@ style="border-color: rgb(94, 94, 94) !important;"
 <!-- CHILLIAN -->
 
 
-<a data-open="ventana-chillian" href="#anchor-pedir-chillian">
+<a data-open="ventana-chillian" href="##anchor-pedir-chillian">
 <div style="border: #ff8900 solid; box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3); width: 95%; margin: auto; height: 120px; margin-top: 20px;">
     <img style="border: 2px solid rgb(255, 136, 0); height: 115px; width: 120px; border-bottom: 0px;" class="img-pizza" src="/Pizzas/chillian.png" alt="">
 
@@ -2719,9 +3096,9 @@ Tomate </p>
 style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -50px;"
     />
       
-    <a id="anchor-pedir-chillian"></a>
+    <a id="#anchor-pedir-chillian"></a>
      
-      <footer><button type="button" class="buttons" style="width: 95%; height: 70px !important;" data-close="" data-open="chillian-html" onclick="chillianpizza();">Pedir</button>
+      <footer><button type="button" class="buttons" style="width: 95%; height: 70px !important;" data-close="" data-open="chillian-html" onclick="chillianpizza();" href="##anchor-agregar-chillian">Pedir</button>
        <br><br>
         <button type="button" class="button-select" style="width: auto; height: 70px !important;" data-close="">CERRAR</button>
 
@@ -2823,9 +3200,9 @@ style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -
 
 
          
-        <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1chillianfamiliares" data-close="" onclick="chillianfamiliares();">1</button> 
+        <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1chillianfamiliares" data-close="" onclick="chillianfamiliares();chillianbuttonoff();">1</button> 
 
-        <button type="button" class="button-select" style="width: 90%;" value="$8.995" id="1chillianfamiliaresx" data-close="" onclick="chillianfamiliaresx();" hidden >1</button>
+        <button type="button" class="button-select" style="width: 90%;" value="$8.995" id="1chillianfamiliaresuno" data-close="" onclick="chillianfamiliaresuno();" hidden >1</button>
         <br>
         <br>
               <button type="button" class="button-select" style="width: 90%;" value="$17.990" id="2chillianfamiliares" data-close="" onclick="chillianfamiliaresdos();" data-open="agregarbebidapromo">2</button>
@@ -2874,9 +3251,9 @@ style="border-color: rgb(94, 94, 94) !important; padding-top: 0px; margin-top: -
 
       <section class="modal-content" >
 
-        <button type="button" class="button-select" style="width: 90%;" value="$7.495" id="1chillianmedianas" data-close="" onclick="chillianmedianas();">1</button>
+        <button type="button" class="button-select" style="width: 90%;" value="$7.495" id="1chillianmedianas" data-close="" onclick="chillianmedianas();chillianbuttonoff();">1</button>
 
-         <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1chillianmedianasx" data-close="" onclick="chillianmedianasx();" hidden>1</button>
+         <button type="button" class="button-select" style="width: 90%;" value="$10.990" id="1chillianmedianasuno" data-close="" onclick="chillianmedianasuno();" hidden>1</button>
    <br>
    <br>
          <button type="button" class="button-select" style="width: 90%;" value="$17.990" id="2chilliannamedianas"data-close="" onclick="chillianmedianasdos();">2</button>
@@ -2940,11 +3317,11 @@ style="border-color: rgb(94, 94, 94) !important;"
 
         
         <br><br>
-        <button type="button" class="buttons" style="width: 100%; height: 70px !important;" id="finalizarpedido-chillian" data-close="" onclick="agregaralpedidochillian();" >Agregar al Pedido<img src="/PalmasPizzaIMG/carrito-img-white.png" alt="" style="width: 50px; position: absolute; margin-top: -15px;"></button>
-
+        <button type="button" class="buttons" style="width: 100%; height: 70px !important;" id="finalizarpedido-chillian" data-close="" onclick="sumartodo();agregaralpedidochillian();" >Agregar al Pedido<img src="/PalmasPizzaIMG/carrito-img-white.png" alt="" style="width: 50px; position: absolute; margin-top: -15px;"></button>
+<a id="anchor-pedir"></a>
 
             </form>
-           <script src="/Index/chillian.js"></script>
+           <script src="/Javascript/chillian.js"></script>
   </div>
 </div>
 </div>
@@ -3003,15 +3380,15 @@ style="border-color: rgb(94, 94, 94) !important;"
 
 <!-- FIN FORM2 -->
 
-      <script src="/Index/ventanas.js"></script>
-      <script src="/Index/palmaspizza.js"></script>
-      <script src="/Index/italiana.js"></script>
-      <script src="/Index/hawaiana.js"></script>
-      <script src="/Index/pollobbq.js"></script>
-      <script src="/Index/superpepperoni.js"></script>
-      <script src="/Index/lucopizza.js"></script>
-      <script src="/Index/napolitana.js"></script>
-      <script src="/Index/vegetariana.js"></script>
-      <script src="/Index/chillian.js"></script>
+      <script src="/Javascript/ventanas.js"></script>
+      <script src="/Javascript/palmaspizza.js"></script>
+      <script src="/Javascript/italiana.js"></script>
+      <script src="/Javascript/hawaiana.js"></script>
+      <script src="/Javascript/pollobbq.js"></script>
+      <script src="/Javascript/superpepperoni.js"></script>
+      <script src="/Javascript/lucopizza.js"></script>
+      <script src="/Javascript/napolitana.js"></script>
+      <script src="/Javascript/vegetariana.js"></script>
+      <script src="/Javascript/chillian.js"></script>
 </body>
 </html>
