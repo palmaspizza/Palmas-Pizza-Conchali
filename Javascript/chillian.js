@@ -59,6 +59,7 @@ function cambiarcolormasatradicionalchillian(){
   document.getElementById("masatradicionalchillian").style.color = "#fff"
   document.getElementById("masatradicionalchillian").style.fontSize = "180%"
   document.getElementById("input-chillian-masa").value = 'MASA TRADICIONAL';
+    document.getElementById("finalizarpedido-chillian").hidden = false;
 }
 
 function cambiarcolormasadelgadachillian(){
@@ -69,6 +70,7 @@ function cambiarcolormasadelgadachillian(){
   document.getElementById("masadelgadachillian").style.color = "#fff"
   document.getElementById("masadelgadachillian").style.fontSize = "180%"
   document.getElementById("input-chillian-masa").value = 'MASA DELGADA';
+    document.getElementById("finalizarpedido-chillian").hidden = false;
 }
 
 
@@ -82,6 +84,11 @@ function chillianbuttonoff() {
   document.getElementById("familiarchillian").style.background = "#fff"
   document.getElementById("familiarchillian").style.color = "#b8b8b8"
   document.getElementById("familiarchillian").style.border = "4px solid #b8b8b8"
+  document.getElementById("borraryvolver-chillian").disabled = true;
+document.getElementById("borraryvolver-chillian").style.background = "#fff"
+document.getElementById("borraryvolver-chillian").style.color = "#b8b8b8"
+document.getElementById("borraryvolver-chillian").style.border = "4px solid #b8b8b8"
+document.getElementById("spanchillian").style.color = "#b8b8b8"
 
 }
 
@@ -90,7 +97,7 @@ function chillianmedianas() {
   document.getElementById("input-chillian-precio").value = '8990';
   document.getElementById("input-chillian-cantidad").value = '1';
   document.getElementById("input-chillian-tamaño").value = 'MEDIANA';
-  document.getElementById("input-chillian-pizza").value = 'ITALIANA';
+  document.getElementById("input-chillian-pizza").value = 'CHILLIAN';
 
   
 // -italiana-
@@ -133,7 +140,7 @@ function chillianmedianasuno() {
 document.getElementById("input-chillian-precio").value = '6000';
 document.getElementById("input-chillian-cantidad").value = '1';
 document.getElementById("input-chillian-tamaño").value = 'MEDIANA';
-document.getElementById("input-chillian-pizza").value = 'ITALIANA';
+document.getElementById("input-chillian-pizza").value = 'CHILLIAN';
 
 // -italiana-
 document.getElementById("1italianamedianas").hidden = true;
@@ -302,8 +309,14 @@ function chillianpizza() {
   }
 
 
-
   function borrarpedidochillian() {
+    
+  
+    var total= parseFloat(document.getElementById("total").value) || 0,
+    inputchillianprecio= parseFloat(document.getElementById("input-chillian-precio").value) || 0;
+   
+ document.getElementById("total").value = total - inputchillianprecio;
+
     document.getElementById("input-chillian-pizza").value = '';
     document.getElementById("input-chillian-tamaño").value = '';
     document.getElementById("input-chillian-cantidad").value = '';
@@ -312,13 +325,32 @@ function chillianpizza() {
     document.getElementById("inputs-chillian").hidden = true;
     document.getElementById("finalizar-pedido-button").hidden = true; 
     document.getElementById("volver-chillian").hidden = true; 
-        // -chillian-
+    document.getElementById("medianachillian").disabled = false;
+    document.getElementById("familiarchillian").disabled = false;  
+    document.getElementById("familiarchillian").style.background = "#fff"
+    document.getElementById("familiarchillian").style.color = "#ff7700"
+    document.getElementById("familiarchillian").style.fontSize = "150%"
+    document.getElementById("familiarchillian").style.border = "4px solid #ff7700"
+    document.getElementById("medianachillian").style.background = "#fff"
+    document.getElementById("medianachillian").style.color = "#ff7700"
+    document.getElementById("medianachillian").style.fontSize = "150%"
+    document.getElementById("medianachillian").style.border = "4px solid #ff7700"
+    document.getElementById("spanschillian").style.color = "#ff5500"
+            // -chillian-
 document.getElementById("1chillianfamiliares").hidden = false;
 document.getElementById("1chillianfamiliaresuno").hidden = true;
-    }
+    // 
+try{
+  var total = parseFloat(document.getElementById("total").value) || 0,
+  preciochillian = parseFloat(document.getElementById("input-chillian-precio").value) || 0;
+
+  document.getElementById("total").value = total - preciochillian;
+}
+catch (e) {}
 
 
-
+  }
+    
 
 
 

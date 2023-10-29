@@ -59,6 +59,7 @@ function cambiarcolormasatradicionalsuperpepperoni(){
   document.getElementById("masatradicionalsuperpepperoni").style.color = "#fff"
   document.getElementById("masatradicionalsuperpepperoni").style.fontSize = "180%"
   document.getElementById("input-superpepperoni-masa").value = 'MASA TRADICIONAL';
+    document.getElementById("finalizarpedido-superpepperoni").hidden = false;
 }
 
 function cambiarcolormasadelgadasuperpepperoni(){
@@ -69,6 +70,7 @@ function cambiarcolormasadelgadasuperpepperoni(){
   document.getElementById("masadelgadasuperpepperoni").style.color = "#fff"
   document.getElementById("masadelgadasuperpepperoni").style.fontSize = "180%"
   document.getElementById("input-superpepperoni-masa").value = 'MASA DELGADA';
+    document.getElementById("finalizarpedido-superpepperoni").hidden = false;
 }
 
 
@@ -82,6 +84,11 @@ function superpepperonibuttonoff() {
   document.getElementById("familiarsuperpepperoni").style.background = "#fff"
   document.getElementById("familiarsuperpepperoni").style.color = "#b8b8b8"
   document.getElementById("familiarsuperpepperoni").style.border = "4px solid #b8b8b8"
+  document.getElementById("borraryvolver-superpepperoni").disabled = true;
+document.getElementById("borraryvolver-superpepperoni").style.background = "#fff"
+document.getElementById("borraryvolver-superpepperoni").style.color = "#b8b8b8"
+document.getElementById("borraryvolver-superpepperoni").style.border = "4px solid #b8b8b8"
+document.getElementById("spansuperpepperoni").style.color = "#b8b8b8";
 
 }
 
@@ -96,7 +103,7 @@ function superpepperonimedianas() {
   document.getElementById("input-superpepperoni-precio").value = '8990';
   document.getElementById("input-superpepperoni-cantidad").value = '1';
   document.getElementById("input-superpepperoni-tamaño").value = 'MEDIANA';
-  document.getElementById("input-superpepperoni-pizza").value = 'ITALIANA';
+  document.getElementById("input-superpepperoni-pizza").value = 'SUPER PEPPERONI';
 
   
 // -italiana-
@@ -139,7 +146,7 @@ function superpepperonimedianasuno() {
 document.getElementById("input-superpepperoni-precio").value = '6000';
 document.getElementById("input-superpepperoni-cantidad").value = '1';
 document.getElementById("input-superpepperoni-tamaño").value = 'MEDIANA';
-document.getElementById("input-superpepperoni-pizza").value = 'ITALIANA';
+document.getElementById("input-superpepperoni-pizza").value = 'SUPER PEPPERONI';
 
 // -italiana-
 document.getElementById("1italianamedianas").hidden = false;
@@ -308,8 +315,14 @@ function superpepperonipizza() {
   }
 
 
-
   function borrarpedidosuperpepperoni() {
+    
+  
+    var total= parseFloat(document.getElementById("total").value) || 0,
+    inputsuperpepperoniprecio= parseFloat(document.getElementById("input-superpepperoni-precio").value) || 0;
+   
+ document.getElementById("total").value = total - inputsuperpepperoniprecio;
+
     document.getElementById("input-superpepperoni-pizza").value = '';
     document.getElementById("input-superpepperoni-tamaño").value = '';
     document.getElementById("input-superpepperoni-cantidad").value = '';
@@ -328,14 +341,22 @@ function superpepperonipizza() {
     document.getElementById("medianasuperpepperoni").style.color = "#ff7700"
     document.getElementById("medianasuperpepperoni").style.fontSize = "150%"
     document.getElementById("medianasuperpepperoni").style.border = "4px solid #ff7700"
+    document.getElementById("spansuperpepperoni").style.color = "#ff5500"
             // -superpepperoni-
 document.getElementById("1superpepperonifamiliares").hidden = false;
 document.getElementById("1superpepperonifamiliaresuno").hidden = true;
-    }
+    // 
+try{
+  var total = parseFloat(document.getElementById("total").value) || 0,
+  preciosuperpepperoni = parseFloat(document.getElementById("input-superpepperoni-precio").value) || 0;
+
+  document.getElementById("total").value = total - preciosuperpepperoni;
+}
+catch (e) {}
 
 
-
-
+  }
+    
 
 
 

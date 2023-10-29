@@ -59,6 +59,7 @@ function cambiarcolormasatradicionalpollobbq(){
   document.getElementById("masatradicionalpollobbq").style.color = "#fff"
   document.getElementById("masatradicionalpollobbq").style.fontSize = "180%"
   document.getElementById("input-pollobbq-masa").value = 'MASA TRADICIONAL';
+    document.getElementById("finalizarpedido-pollobbq").hidden = false;
 }
 
 function cambiarcolormasadelgadapollobbq(){
@@ -69,6 +70,7 @@ function cambiarcolormasadelgadapollobbq(){
   document.getElementById("masadelgadapollobbq").style.color = "#fff"
   document.getElementById("masadelgadapollobbq").style.fontSize = "180%"
   document.getElementById("input-pollobbq-masa").value = 'MASA DELGADA';
+    document.getElementById("finalizarpedido-pollobbq").hidden = false;
 }
 
 
@@ -82,6 +84,12 @@ function pollobbqbuttonoff() {
   document.getElementById("familiarpollobbq").style.background = "#fff"
   document.getElementById("familiarpollobbq").style.color = "#b8b8b8"
   document.getElementById("familiarpollobbq").style.border = "4px solid #b8b8b8"
+  document.getElementById("borraryvolver-pollobbq").disabled = true;
+document.getElementById("borraryvolver-pollobbq").style.background = "#fff"
+document.getElementById("borraryvolver-pollobbq").style.color = "#b8b8b8"
+document.getElementById("borraryvolver-pollobbq").style.border = "4px solid #b8b8b8"
+document.getElementById("spanpollobbq").style.color = "#b8b8b8"
+
 
 }
 
@@ -91,7 +99,7 @@ function pollobbqmedianas() {
   document.getElementById("input-pollobbq-precio").value = '8990';
   document.getElementById("input-pollobbq-cantidad").value = '1';
   document.getElementById("input-pollobbq-tamaño").value = 'MEDIANA';
-  document.getElementById("input-pollobbq-pizza").value = 'ITALIANA';
+  document.getElementById("input-pollobbq-pizza").value = 'POLLO BBQ';
 
   
 // -italiana-
@@ -134,7 +142,7 @@ function pollobbqmedianasuno() {
 document.getElementById("input-pollobbq-precio").value = '6000';
 document.getElementById("input-pollobbq-cantidad").value = '1';
 document.getElementById("input-pollobbq-tamaño").value = 'MEDIANA';
-document.getElementById("input-pollobbq-pizza").value = 'ITALIANA';
+document.getElementById("input-pollobbq-pizza").value = 'POLLO BBQ';
 
 // -italiana-
 document.getElementById("1italianamedianas").hidden = false;
@@ -302,6 +310,13 @@ function pollobbqpizza() {
 
 
   function borrarpedidopollobbq() {
+    
+  
+    var total= parseFloat(document.getElementById("total").value) || 0,
+    inputpollobbqprecio= parseFloat(document.getElementById("input-pollobbq-precio").value) || 0;
+   
+ document.getElementById("total").value = total - inputpollobbqprecio;
+
     document.getElementById("input-pollobbq-pizza").value = '';
     document.getElementById("input-pollobbq-tamaño").value = '';
     document.getElementById("input-pollobbq-cantidad").value = '';
@@ -320,11 +335,22 @@ function pollobbqpizza() {
     document.getElementById("medianapollobbq").style.color = "#ff7700"
     document.getElementById("medianapollobbq").style.fontSize = "150%"
     document.getElementById("medianapollobbq").style.border = "4px solid #ff7700"
+    document.getElementById("spanpollobbq").style.color = "#ff5500"
             // -pollobbq-
 document.getElementById("1pollobbqfamiliares").hidden = false;
 document.getElementById("1pollobbqfamiliaresuno").hidden = true;
-    }
+    // 
+try{
+  var total = parseFloat(document.getElementById("total").value) || 0,
+  preciopollobbq = parseFloat(document.getElementById("input-pollobbq-precio").value) || 0;
 
+  document.getElementById("total").value = total - preciopollobbq;
+}
+catch (e) {}
+
+
+  }
+    
 
 
 

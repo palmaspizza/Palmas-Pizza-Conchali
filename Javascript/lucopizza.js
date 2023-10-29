@@ -51,6 +51,7 @@ function cambiarcolorsalsabbqlucopizza(){
 
 
 
+
 function cambiarcolormasatradicionallucopizza(){
   document.getElementById("masadelgadalucopizza").style.background = "#fff"
   document.getElementById("masadelgadalucopizza").style.color = "#ff7700"
@@ -59,6 +60,8 @@ function cambiarcolormasatradicionallucopizza(){
   document.getElementById("masatradicionallucopizza").style.color = "#fff"
   document.getElementById("masatradicionallucopizza").style.fontSize = "180%"
   document.getElementById("input-lucopizza-masa").value = 'MASA TRADICIONAL';
+  document.getElementById("finalizarpedido-lucopizza").hidden = false;
+
 }
 
 function cambiarcolormasadelgadalucopizza(){
@@ -69,6 +72,8 @@ function cambiarcolormasadelgadalucopizza(){
   document.getElementById("masadelgadalucopizza").style.color = "#fff"
   document.getElementById("masadelgadalucopizza").style.fontSize = "180%"
   document.getElementById("input-lucopizza-masa").value = 'MASA DELGADA';
+  document.getElementById("finalizarpedido-lucopizza").hidden = false;
+
 }
 
 
@@ -85,6 +90,11 @@ function lucopizzabuttonoff() {
   document.getElementById("familiarlucopizza").style.background = "#fff"
   document.getElementById("familiarlucopizza").style.color = "#b8b8b8"
   document.getElementById("familiarlucopizza").style.border = "4px solid #b8b8b8"
+  document.getElementById("borraryvolver-lucopizza").disabled = true;
+document.getElementById("borraryvolver-lucopizza").style.background = "#fff"
+document.getElementById("borraryvolver-lucopizza").style.color = "#b8b8b8"
+document.getElementById("borraryvolver-lucopizza").style.border = "4px solid #b8b8b8"
+document.getElementById("spanlucopizza").style.color = "#b8b8b8"
 
 }
 
@@ -97,7 +107,7 @@ function lucopizzamedianas() {
   document.getElementById("input-lucopizza-precio").value = '8990';
   document.getElementById("input-lucopizza-cantidad").value = '1';
   document.getElementById("input-lucopizza-tamaño").value = 'MEDIANA';
-  document.getElementById("input-lucopizza-pizza").value = 'ITALIANA';
+  document.getElementById("input-lucopizza-pizza").value = 'LUCO PIZZA';
 
   
 // -italiana-
@@ -140,7 +150,7 @@ function lucopizzamedianasuno() {
 document.getElementById("input-lucopizza-precio").value = '6000';
 document.getElementById("input-lucopizza-cantidad").value = '1';
 document.getElementById("input-lucopizza-tamaño").value = 'MEDIANA';
-document.getElementById("input-lucopizza-pizza").value = 'ITALIANA';
+document.getElementById("input-lucopizza-pizza").value = 'LUCO PIZZA';
 
 // -italiana-
 document.getElementById("1italianamedianas").hidden = true;
@@ -302,13 +312,20 @@ document.getElementById("input-lucopizza-cantidad").value = '4';
 
 
 function lucopizzapizza() {
-  document.getElementById("input-lucopizza-pizza").value = 'Luco PizzaS';
+  document.getElementById("input-lucopizza-pizza").value = 'LUCO PIZZAS';
   document.getElementById("volver-lucopizza-html").hidden = true; 
   }
 
 
 
   function borrarpedidolucopizza() {
+    
+  
+    var total= parseFloat(document.getElementById("total").value) || 0,
+    inputlucopizzaprecio= parseFloat(document.getElementById("input-lucopizza-precio").value) || 0;
+   
+ document.getElementById("total").value = total - inputlucopizzaprecio;
+
     document.getElementById("input-lucopizza-pizza").value = '';
     document.getElementById("input-lucopizza-tamaño").value = '';
     document.getElementById("input-lucopizza-cantidad").value = '';
@@ -327,12 +344,22 @@ function lucopizzapizza() {
     document.getElementById("medianalucopizza").style.color = "#ff7700"
     document.getElementById("medianalucopizza").style.fontSize = "150%"
     document.getElementById("medianalucopizza").style.border = "4px solid #ff7700"
-        // -lucopizza-
+    document.getElementById("spanlucopizza").style.color = "#ff5500"
+            // -lucopizza-
 document.getElementById("1lucopizzafamiliares").hidden = false;
 document.getElementById("1lucopizzafamiliaresuno").hidden = true;
+    // 
+try{
+  var total = parseFloat(document.getElementById("total").value) || 0,
+  preciolucopizza = parseFloat(document.getElementById("input-lucopizza-precio").value) || 0;
+
+  document.getElementById("total").value = total - preciolucopizza;
+}
+catch (e) {}
 
 
-    }
+  }
+    
 
 
 

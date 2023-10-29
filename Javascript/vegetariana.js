@@ -48,6 +48,24 @@ function cambiarcolorsalsabbqvegetariana(){
 
 
 
+function vegetarianabuttonoff() {
+  document.getElementById("medianavegetariana").disabled = true;
+  document.getElementById("medianavegetariana").style.background = "#fff"
+  document.getElementById("medianavegetariana").style.color = "#b8b8b8"
+  document.getElementById("medianavegetariana").style.border = "4px solid #b8b8b8"
+  document.getElementById("familiarvegetariana").disabled = true;
+  document.getElementById("familiarvegetariana").style.background = "#fff"
+  document.getElementById("familiarvegetariana").style.color = "#b8b8b8"
+  document.getElementById("familiarvegetariana").style.border = "4px solid #b8b8b8"
+  document.getElementById("borraryvolver-vegetariana").disabled = true;
+  document.getElementById("borraryvolver-vegetariana").style.background = "#fff"
+  document.getElementById("borraryvolver-vegetariana").style.color = "#b8b8b8"
+  document.getElementById("borraryvolver-vegetariana").style.border = "4px solid #b8b8b8"
+  document.getElementById("spanvegetariana").style.color = "#b8b8b8"
+
+
+
+}
 
 
 
@@ -59,6 +77,8 @@ function cambiarcolormasatradicionalvegetariana(){
   document.getElementById("masatradicionalvegetariana").style.color = "#fff"
   document.getElementById("masatradicionalvegetariana").style.fontSize = "180%"
   document.getElementById("input-vegetariana-masa").value = 'MASA TRADICIONAL';
+  document.getElementById("finalizarpedido-vegetariana").hidden = false;
+
 }
 
 function cambiarcolormasadelgadavegetariana(){
@@ -69,6 +89,8 @@ function cambiarcolormasadelgadavegetariana(){
   document.getElementById("masadelgadavegetariana").style.color = "#fff"
   document.getElementById("masadelgadavegetariana").style.fontSize = "180%"
   document.getElementById("input-vegetariana-masa").value = 'MASA DELGADA';
+  document.getElementById("finalizarpedido-vegetariana").hidden = false;
+
 }
 
 
@@ -78,7 +100,7 @@ function vegetarianamedianas() {
   document.getElementById("input-vegetariana-precio").value = '8990';
   document.getElementById("input-vegetariana-cantidad").value = '1';
   document.getElementById("input-vegetariana-tamaño").value = 'MEDIANA';
-  document.getElementById("input-vegetariana-pizza").value = 'ITALIANA';
+  document.getElementById("input-vegetariana-pizza").value = 'VEGETARIANA';
 
   
 // -italiana-
@@ -124,17 +146,7 @@ document.getElementById("1cheeseburgerfamiliaresuno").hidden = false;
 
 
 
-  function vegetarianabuttonoff() {
-    document.getElementById("medianavegetariana").disabled = true;
-    document.getElementById("medianavegetariana").style.background = "#fff"
-    document.getElementById("medianavegetariana").style.color = "#b8b8b8"
-    document.getElementById("medianavegetariana").style.border = "4px solid #b8b8b8"
-    document.getElementById("familiarvegetariana").disabled = true;
-    document.getElementById("familiarvegetariana").style.background = "#fff"
-    document.getElementById("familiarvegetariana").style.color = "#b8b8b8"
-    document.getElementById("familiarvegetariana").style.border = "4px solid #b8b8b8"
 
-  }
 
 
 
@@ -146,7 +158,7 @@ function vegetarianamedianasuno() {
 document.getElementById("input-vegetariana-precio").value = '6000';
 document.getElementById("input-vegetariana-cantidad").value = '1';
 document.getElementById("input-vegetariana-tamaño").value = 'MEDIANA';
-document.getElementById("input-vegetariana-pizza").value = 'ITALIANA';
+document.getElementById("input-vegetariana-pizza").value = 'VEGETARIANA';
 
 // -italiana-
 document.getElementById("1italianamedianas").hidden = false;
@@ -317,8 +329,14 @@ function vegetarianapizza() {
   }
 
 
-
   function borrarpedidovegetariana() {
+    
+  
+    var total= parseFloat(document.getElementById("total").value) || 0,
+    inputvegetarianaprecio= parseFloat(document.getElementById("input-vegetariana-precio").value) || 0;
+   
+ document.getElementById("total").value = total - inputvegetarianaprecio;
+
     document.getElementById("input-vegetariana-pizza").value = '';
     document.getElementById("input-vegetariana-tamaño").value = '';
     document.getElementById("input-vegetariana-cantidad").value = '';
@@ -337,19 +355,22 @@ function vegetarianapizza() {
     document.getElementById("medianavegetariana").style.color = "#ff7700"
     document.getElementById("medianavegetariana").style.fontSize = "150%"
     document.getElementById("medianavegetariana").style.border = "4px solid #ff7700"
-    document.getElementById("masatradicionalvegetariana").style.background = "#fff"
-    document.getElementById("masatradicionalvegetariana").style.color = "#ff7700"
-    document.getElementById("masatradicionalvegetariana").style.fontSize = "150%"
-    document.getElementById("masatradicionalvegetariana").style.border = "4px solid #ff7700"
-    document.getElementById("masadelgadavegetariana").style.background = "#fff"
-    document.getElementById("masadelgadavegetariana").style.color = "#ff7700"
-    document.getElementById("masadelgadavegetariana").style.fontSize = "150%"
-    document.getElementById("masadelgadavegetariana").style.border = "4px solid #ff7700"
-    
+    document.getElementById("spanvegetariana").style.color = "#ff5500"
             // -vegetariana-
 document.getElementById("1vegetarianafamiliares").hidden = false;
 document.getElementById("1vegetarianafamiliaresuno").hidden = true;
-    }
+    // 
+try{
+  var total = parseFloat(document.getElementById("total").value) || 0,
+  preciovegetariana = parseFloat(document.getElementById("input-vegetariana-precio").value) || 0;
+
+  document.getElementById("total").value = total - preciovegetariana;
+}
+catch (e) {}
+
+
+  }
+    
 
 
 

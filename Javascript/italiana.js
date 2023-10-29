@@ -59,6 +59,8 @@ function cambiarcolormasatradicionalitaliana(){
   document.getElementById("masatradicionalitaliana").style.color = "#fff"
   document.getElementById("masatradicionalitaliana").style.fontSize = "180%"
   document.getElementById("input-italiana-masa").value = 'MASA TRADICIONAL';
+  document.getElementById("finalizarpedido-italiana").hidden = false;
+
 }
 
 function cambiarcolormasadelgadaitaliana(){
@@ -69,6 +71,8 @@ function cambiarcolormasadelgadaitaliana(){
   document.getElementById("masadelgadaitaliana").style.color = "#fff"
   document.getElementById("masadelgadaitaliana").style.fontSize = "180%"
   document.getElementById("input-italiana-masa").value = 'MASA DELGADA';
+  document.getElementById("finalizarpedido-italiana").hidden = false;
+
 }
 
 
@@ -86,6 +90,13 @@ function italianabuttonoff() {
   document.getElementById("familiaritaliana").style.background = "#fff"
   document.getElementById("familiaritaliana").style.color = "#b8b8b8"
   document.getElementById("familiaritaliana").style.border = "4px solid #b8b8b8"
+  document.getElementById("borraryvolver-italiana").disabled = true;
+  document.getElementById("borraryvolver-italiana").style.background = "#fff"
+  document.getElementById("borraryvolver-italiana").style.color = "#b8b8b8"
+  document.getElementById("borraryvolver-italiana").style.border = "4px solid #b8b8b8"
+  document.getElementById("spanitaliana").style.color = "#b8b8b8"
+
+
 
 }
 
@@ -309,6 +320,13 @@ function italianapizza() {
 
 
   function borrarpedidoitaliana() {
+    
+  
+    var total= parseFloat(document.getElementById("total").value) || 0,
+    inputitalianaprecio= parseFloat(document.getElementById("input-italiana-precio").value) || 0;
+   
+ document.getElementById("total").value = total - inputitalianaprecio;
+
     document.getElementById("input-italiana-pizza").value = '';
     document.getElementById("input-italiana-tamaño").value = '';
     document.getElementById("input-italiana-cantidad").value = '';
@@ -327,10 +345,20 @@ function italianapizza() {
     document.getElementById("medianaitaliana").style.color = "#ff7700"
     document.getElementById("medianaitaliana").style.fontSize = "150%"
     document.getElementById("medianaitaliana").style.border = "4px solid #ff7700"
+    document.getElementById("spanitaliana").style.color = "#ff5500"
             // -italiana-
 document.getElementById("1italianafamiliares").hidden = false;
 document.getElementById("1italianafamiliaresuno").hidden = true;
     // 
+try{
+  var total = parseFloat(document.getElementById("total").value) || 0,
+  precioitaliana = parseFloat(document.getElementById("input-italiana-precio").value) || 0;
+
+  document.getElementById("total").value = total - precioitaliana;
+}
+catch (e) {}
+
+
   }
     
 
@@ -349,6 +377,7 @@ document.getElementById("1italianafamiliaresuno").hidden = true;
       var nota=document.getElementById("instrucciones-italiana").value;
       document.getElementById("input-italiana-instrucciones").value= nota;
       document.getElementById("volver-italiana-html").hidden = true; 
+
 
 
 

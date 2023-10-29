@@ -59,6 +59,7 @@ function cambiarcolormasatradicionalhawaiana(){
   document.getElementById("masatradicionalhawaiana").style.color = "#fff"
   document.getElementById("masatradicionalhawaiana").style.fontSize = "170%"
   document.getElementById("input-hawaiana-masa").value = 'MASA TRADICIONAL';
+    document.getElementById("finalizarpedido-hawaiana").hidden = false;
 }
 
 function cambiarcolormasadelgadahawaiana(){
@@ -69,6 +70,7 @@ function cambiarcolormasadelgadahawaiana(){
   document.getElementById("masadelgadahawaiana").style.color = "#fff"
   document.getElementById("masadelgadahawaiana").style.fontSize = "170%"
   document.getElementById("input-hawaiana-masa").value = 'MASA DELGADA';
+    document.getElementById("finalizarpedido-hawaiana").hidden = false;
 }
 
 
@@ -126,6 +128,9 @@ document.getElementById("1chillianmedianasuno").hidden = true;
     document.getElementById("familiarhawaiana").style.background = "#fff"
     document.getElementById("familiarhawaiana").style.color = "#b8b8b8"
     document.getElementById("familiarhawaiana").style.border = "4px solid #b8b8b8"
+    document.getElementById("spanhawaiana").style.color = "#b8b8b8"
+    
+    
   
   }
 
@@ -199,7 +204,7 @@ function hawaianafamiliaresuno() {
   document.getElementById("input-hawaiana-precio").value = '7000';
   document.getElementById("input-hawaiana-cantidad").value = '1';
   document.getElementById("input-hawaiana-tamaño").value = 'FAMILIAR';
-  document.getElementById("input-hawaiana-pizza").value = 'NAPOLITANA';
+  document.getElementById("input-hawaiana-pizza").value = 'HAWAIANA';
   }
 
 
@@ -208,7 +213,7 @@ function hawaianafamiliares() {
 document.getElementById("input-hawaiana-precio").value = '10990';
 document.getElementById("input-hawaiana-cantidad").value = '1';
 document.getElementById("input-hawaiana-tamaño").value = 'FAMILIAR';
-document.getElementById("input-hawaiana-pizza").value = 'NAPOLITANA';
+document.getElementById("input-hawaiana-pizza").value = 'HAWAIANA';
 }
 
 function hawaianafamiliaresdos() {
@@ -236,6 +241,13 @@ function hawaianapizza() {
 
 
   function borrarpedidohawaiana() {
+    
+  
+    var total= parseFloat(document.getElementById("total").value) || 0,
+    inputhawaianaprecio= parseFloat(document.getElementById("input-hawaiana-precio").value) || 0;
+   
+ document.getElementById("total").value = total - inputhawaianaprecio;
+
     document.getElementById("input-hawaiana-pizza").value = '';
     document.getElementById("input-hawaiana-tamaño").value = '';
     document.getElementById("input-hawaiana-cantidad").value = '';
@@ -254,13 +266,22 @@ function hawaianapizza() {
     document.getElementById("medianahawaiana").style.color = "#ff7700"
     document.getElementById("medianahawaiana").style.fontSize = "150%"
     document.getElementById("medianahawaiana").style.border = "4px solid #ff7700"
+    document.getElementById("spanhawaiana").style.color = "#ff5500"
             // -hawaiana-
-document.getElementById("hawaianafamiliares").hidden = false;
-document.getElementById("hawaianafamiliaresuno").hidden = true;
-    }
+document.getElementById("1hawaianafamiliares").hidden = false;
+document.getElementById("1hawaianafamiliaresuno").hidden = true;
+    // 
+try{
+  var total = parseFloat(document.getElementById("total").value) || 0,
+  preciohawaiana = parseFloat(document.getElementById("input-hawaiana-precio").value) || 0;
+
+  document.getElementById("total").value = total - preciohawaiana;
+}
+catch (e) {}
 
 
-
+  }
+    
 
 
 

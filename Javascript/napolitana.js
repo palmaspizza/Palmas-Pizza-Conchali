@@ -59,6 +59,7 @@ function cambiarcolormasatradicionalnapolitana(){
   document.getElementById("masatradicionalnapolitana").style.color = "#fff"
   document.getElementById("masatradicionalnapolitana").style.fontSize = "180%"
   document.getElementById("input-napolitana-masa").value = 'MASA TRADICIONAL';
+    document.getElementById("finalizarpedido-napolitana").hidden = false;
 }
 
 function cambiarcolormasadelgadanapolitana(){
@@ -69,6 +70,7 @@ function cambiarcolormasadelgadanapolitana(){
   document.getElementById("masadelgadanapolitana").style.color = "#fff"
   document.getElementById("masadelgadanapolitana").style.fontSize = "180%"
   document.getElementById("input-napolitana-masa").value = 'MASA DELGADA';
+    document.getElementById("finalizarpedido-napolitana").hidden = false;
 }
 
 
@@ -84,6 +86,11 @@ function napolitanabuttonoff(){
   document.getElementById("familiarnapolitana").style.color = "#b8b8b8"
   document.getElementById("familiarnapolitana").style.border = "4px solid #b8b8b8"
   document.getElementById("mediananapolitana").disabled = true;
+  document.getElementById("borraryvolver-napolitana").disabled = true;
+  document.getElementById("borraryvolver-napolitana").style.background = "#fff"
+  document.getElementById("borraryvolver-napolitana").style.color = "#b8b8b8"
+  document.getElementById("borraryvolver-napolitana").style.border = "4px solid #b8b8b8"
+  document.getElementById("spannapolitana").style.color = "#ff5500"
 
 }
 
@@ -94,7 +101,7 @@ function napolitanamedianas() {
   document.getElementById("input-napolitana-precio").value = '8990';
   document.getElementById("input-napolitana-cantidad").value = '1';
   document.getElementById("input-napolitana-tamaño").value = 'MEDIANA';
-  document.getElementById("input-napolitana-pizza").value = 'ITALIANA';
+  document.getElementById("input-napolitana-pizza").value = 'NAPOLITANA';
 
   
 // -italiana-
@@ -141,7 +148,7 @@ function napolitanamedianasuno() {
 document.getElementById("input-napolitana-precio").value = '6000';
 document.getElementById("input-napolitana-cantidad").value = '1';
 document.getElementById("input-napolitana-tamaño").value = 'MEDIANA';
-document.getElementById("input-napolitana-pizza").value = 'ITALIANA';
+document.getElementById("input-napolitana-pizza").value = 'NAPOLITANA';
 
 // -italiana-
 document.getElementById("1italianamedianas").hidden = false;
@@ -312,6 +319,13 @@ function napolitanapizza() {
 
 
   function borrarpedidonapolitana() {
+    
+  
+    var total= parseFloat(document.getElementById("total").value) || 0,
+    inputnapolitanaprecio= parseFloat(document.getElementById("input-napolitana-precio").value) || 0;
+   
+ document.getElementById("total").value = total - inputnapolitanaprecio;
+
     document.getElementById("input-napolitana-pizza").value = '';
     document.getElementById("input-napolitana-tamaño").value = '';
     document.getElementById("input-napolitana-cantidad").value = '';
@@ -330,11 +344,22 @@ function napolitanapizza() {
     document.getElementById("mediananapolitana").style.color = "#ff7700"
     document.getElementById("mediananapolitana").style.fontSize = "150%"
     document.getElementById("mediananapolitana").style.border = "4px solid #ff7700"
-    // -napolitana-
+    document.getElementById("spannapolitana").style.color = "#ff5500"
+            // -napolitana-
 document.getElementById("1napolitanafamiliares").hidden = false;
 document.getElementById("1napolitanafamiliaresuno").hidden = true;
-    }
+    // 
+try{
+  var total = parseFloat(document.getElementById("total").value) || 0,
+  precionapolitana = parseFloat(document.getElementById("input-napolitana-precio").value) || 0;
 
+  document.getElementById("total").value = total - precionapolitana;
+}
+catch (e) {}
+
+
+  }
+    
 
 
 

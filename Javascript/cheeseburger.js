@@ -59,6 +59,7 @@ function cambiarcolormasatradicionalcheeseburger(){
   document.getElementById("masatradicionalcheeseburger").style.color = "#fff"
   document.getElementById("masatradicionalcheeseburger").style.fontSize = "180%"
   document.getElementById("input-cheeseburger-masa").value = 'MASA TRADICIONAL';
+  document.getElementById("finalizarpedido-cheeseburger").hidden = false;
 }
 
 function cambiarcolormasadelgadacheeseburger(){
@@ -69,6 +70,7 @@ function cambiarcolormasadelgadacheeseburger(){
   document.getElementById("masadelgadacheeseburger").style.color = "#fff"
   document.getElementById("masadelgadacheeseburger").style.fontSize = "180%"
   document.getElementById("input-cheeseburger-masa").value = 'MASA DELGADA';
+  document.getElementById("finalizarpedido-cheeseburger").hidden = false;
 }
 
 
@@ -82,6 +84,11 @@ function cheeseburgerbuttonoff() {
   document.getElementById("familiarcheeseburger").style.background = "#fff"
   document.getElementById("familiarcheeseburger").style.color = "#b8b8b8"
   document.getElementById("familiarcheeseburger").style.border = "4px solid #b8b8b8"
+  document.getElementById("borraryvolver-cheeseburger").disabled = true;
+  document.getElementById("borraryvolver-cheeseburger").style.background = "#fff"
+  document.getElementById("borraryvolver-cheeseburger").style.color = "#b8b8b8"
+  document.getElementById("borraryvolver-cheeseburger").style.border = "4px solid #b8b8b8"
+  document.getElementById("spancheeseburger").style.color = "#b8b8b8"
 
 }
 
@@ -90,7 +97,7 @@ function cheeseburgermedianas() {
   document.getElementById("input-cheeseburger-precio").value = '8990';
   document.getElementById("input-cheeseburger-cantidad").value = '1';
   document.getElementById("input-cheeseburger-tamaño").value = 'MEDIANA';
-  document.getElementById("input-cheeseburger-pizza").value = 'ITALIANA';
+  document.getElementById("input-cheeseburger-pizza").value = 'CHESESEBURGER';
 
   
 // -italiana-
@@ -133,7 +140,7 @@ function cheeseburgermedianasuno() {
 document.getElementById("input-cheeseburger-precio").value = '6000';
 document.getElementById("input-cheeseburger-cantidad").value = '1';
 document.getElementById("input-cheeseburger-tamaño").value = 'MEDIANA';
-document.getElementById("input-cheeseburger-pizza").value = 'ITALIANA';
+document.getElementById("input-cheeseburger-pizza").value = 'CHESESEBURGER';
 
 // -italiana-
 document.getElementById("1italianamedianas").hidden = true;
@@ -307,6 +314,13 @@ function cheeseburgerpizza() {
 
 
   function borrarpedidocheeseburger() {
+    
+  
+    var total= parseFloat(document.getElementById("total").value) || 0,
+    inputcheeseburgerprecio= parseFloat(document.getElementById("input-cheeseburger-precio").value) || 0;
+   
+ document.getElementById("total").value = total - inputcheeseburgerprecio;
+
     document.getElementById("input-cheeseburger-pizza").value = '';
     document.getElementById("input-cheeseburger-tamaño").value = '';
     document.getElementById("input-cheeseburger-cantidad").value = '';
@@ -315,11 +329,32 @@ function cheeseburgerpizza() {
     document.getElementById("inputs-cheeseburger").hidden = true;
     document.getElementById("finalizar-pedido-button").hidden = true; 
     document.getElementById("volver-cheeseburger").hidden = true; 
-        // -cheeseburger-
-document.getElementById("1cheeseburgerfamiliares").hidden = false;
-document.getElementById("1cheeseburgerfamiliaresuno").hidden = true;
-    }
+    document.getElementById("medianacheeseburger").disabled = false;
+    document.getElementById("familiarcheeseburger").disabled = false;  
+    document.getElementById("familiarcheeseburger").style.background = "#fff"
+    document.getElementById("familiarcheeseburger").style.color = "#ff7700"
+    document.getElementById("familiarcheeseburger").style.fontSize = "150%"
+    document.getElementById("familiarcheeseburger").style.border = "4px solid #ff7700"
+    document.getElementById("medianacheeseburger").style.background = "#fff"
+    document.getElementById("medianacheeseburger").style.color = "#ff7700"
+    document.getElementById("medianacheeseburger").style.fontSize = "150%"
+    document.getElementById("medianacheeseburger").style.border = "4px solid #ff7700"
+    document.getElementById("spancheeseburger").style.color = "#ff5500"
+            // -cheeseburger-
+    document.getElementById("1cheeseburgerfamiliares").hidden = false;
+    document.getElementById("1cheeseburgerfamiliaresuno").hidden = true;
+    // 
+    try{
+  var total = parseFloat(document.getElementById("total").value) || 0,
+  preciocheeseburger = parseFloat(document.getElementById("input-cheeseburger-precio").value) || 0;
 
+  document.getElementById("total").value = total - preciocheeseburger;
+    }
+    catch (e) {}
+
+
+  }
+    
 
 
 
