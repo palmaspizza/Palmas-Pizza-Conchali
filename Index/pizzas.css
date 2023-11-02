@@ -188,8 +188,7 @@
     display: inline-block;
   }
   
-  .btn-group {
-  }
+
   
   .modal-pizzas {
     position: fixed;
@@ -222,10 +221,7 @@
   
   }
   
-  .modal-dialog > * {
-    
-  }
-  
+
   .modal-header,
   .modal-footer {
     background: var(--lightgray);
@@ -241,9 +237,6 @@
     font-size: 45px;
   }
   
-  .modal p + p {
-  
-  }
 
 
 
