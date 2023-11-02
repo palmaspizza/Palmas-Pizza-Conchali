@@ -125,7 +125,7 @@ ${cancelocon} $${pagacon}%0A
 "https://www.google.com/maps/dir//*${direccion}*"%0A%0A
 --------------------- %0A
 🛎️=== *PEDIDO* === 🛎️ %0A
-${italianacantidad} ${italianapizza} *${italianatamaño}* *${italianamasa}*
+*${italianacantidad} ${italianapizza} ${italianatamaño} ${italianamasa}
 ${instruccionesitaliana}%0A
 
 ${hawaianacantidad} ${hawaianapizza} ${hawaianatamaño} ${hawaianamasa}
@@ -134,22 +134,22 @@ ${instruccioneshawaiana}%0A
 ${napolitanacantidad} ${napolitanapizza} ${napolitanatamaño} ${napolitanamasa}
 ${instruccionesnapolitana}%0A
 
-${superpepperonicantidad} ${superpepperonipizza} *${superpepperonitamaño}* *${superpepperonimasa}*
+${superpepperonicantidad} ${superpepperonipizza} ${superpepperonitamaño} ${superpepperonimasa}
 ${instruccionessuperpepperoni}%0A
 
-${lucopizzacantidad} ${lucopizzapizza} *${lucopizzatamaño}* *${lucopizzamasa}*
+${lucopizzacantidad} ${lucopizzapizza} ${lucopizzatamaño} ${lucopizzamasa}
 ${instruccioneslucopizza}%0A
 
-${vegetarianacantidad} ${vegetarianapizza} *${vegetarianatamaño}* *${vegetarianamasa}*
+${vegetarianacantidad} ${vegetarianapizza} ${vegetarianatamaño} ${vegetarianamasa}
 ${instruccionesvegetariana}%0A
 
-${chilliancantidad} ${chillianpizza} *${chilliantamaño}* *${chillianmasa}*
+${chilliancantidad} ${chillianpizza} ${chilliantamaño} ${chillianmasa}
 ${instruccioneschillian}%0A
 
-${cheeseburgercantidad} ${cheeseburgerpizza} *${cheeseburgertamaño}* *${cheeseburgermasa}*
+${cheeseburgercantidad} ${cheeseburgerpizza} ${cheeseburgertamaño} ${cheeseburgermasa}
 ${instruccionescheeseburger}%0A
 
-${pollobbqcantidad} ${pollobbqpizza} *${pollobbqtamaño}* *${pollobbqmasa}*
+${pollobbqcantidad} ${pollobbqpizza} ${pollobbqtamaño} ${pollobbqmasa}
 ${instruccionespollobbq}%0A*
 
 🪙 *Total:* _$${total}_`
